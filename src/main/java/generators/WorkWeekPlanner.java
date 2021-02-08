@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class EmptyWorkWeekPlannerCreator {
+public class WorkWeekPlanner {
     static final LocalTime WORKDAY_START = LocalTime.of(9, 00);
 
     List<VeterinaryDoctor> doctorsList = Arrays.asList(
@@ -52,6 +52,7 @@ public class EmptyWorkWeekPlannerCreator {
                         (workday.equalsIgnoreCase("Tuesday")
                                 || workday.equalsIgnoreCase("Thursday"))) {
                     doctor.setIsAvailable(false);
+
 
                 } else if (doctor.getNameSurname().equals("Andy Fang") &&
                         workday.equalsIgnoreCase("Thursday")) {
