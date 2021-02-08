@@ -12,25 +12,23 @@ import java.util.List;
 
 public class EmptyWorkWeekPlannerCreator {
     static final LocalTime WORKDAY_START = LocalTime.of(9, 00);
-    public boolean isAvailable;
+
     List<VeterinaryDoctor> doctorsList = Arrays.asList(
             new VeterinaryDoctor("Andy Fang",
                     "junior doctor", Arrays.asList("Monday", "Tuesday", "Wednesday", "Friday"),
                     java.time.Duration.ofHours(4), (WORKDAY_START.plusHours(4))),
             new VeterinaryDoctor("Lewis Talon",
-                    "retiring doctor", Arrays.asList("Monday", "Wednesday", "Friday"), java.time.Duration.ofHours(5),
-                    WORKDAY_START.plusHours(5)),
+                    "retiring doctor", Arrays.asList("Monday", "Wednesday", "Friday"),
+                    java.time.Duration.ofHours(5), WORKDAY_START.plusHours(5)),
             new VeterinaryDoctor("Peter Tooth",
                     "senior doctor", Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),
-                    java.time.Duration.ofHours(9),
-                    WORKDAY_START.plusHours(9)),
+                    java.time.Duration.ofHours(9), WORKDAY_START.plusHours(9)),
             new VeterinaryDoctor("Lauren Tail",
                     "senior doctor", Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),
-                    java.time.Duration.ofHours(9),
-                    WORKDAY_START.plusHours(9)),
+                    java.time.Duration.ofHours(9), WORKDAY_START.plusHours(9)),
             new VeterinaryDoctor("Oliver Tail",
-                    "senior doctor", Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"), java.time.Duration.ofHours(9),
-                    WORKDAY_START.plusHours(9)));
+                    "senior doctor", Arrays.asList("Monday", "Tuesday", "Wednesday", "Thursday", "Friday"),
+                    java.time.Duration.ofHours(9), WORKDAY_START.plusHours(9)));
 
 
     public List<String> workDaysList = new ArrayList<>();
@@ -45,22 +43,30 @@ public class EmptyWorkWeekPlannerCreator {
 
     public Planner getPlannerWithNoBookedAppointments() {
         Planner planner = new Planner();
-        for(String workday : workDaysList){
+        for (String workday : workDaysList) {
             planner.setDay(workday);
             planner.setWorkdayStartTime(WORKDAY_START);
             planner.setDoctors(doctorsList);
-            for(VeterinaryDoctor doctor: planner.getDoctors()){
-                if(doctor.getNameSurname().equals("Peter Tooth") ||
-                        doctor.getNameSurname().equals("Lauren Tail") ||
-                        doctor.getNameSurname().equals("Oliver Tail")){
+            for (VeterinaryDoctor doctor : planner.getDoctors()) {
+                if (doctor.getNameSurname().equals("Lewis Talon") &&
+                        (workday.equalsIgnoreCase("Tuesday")
+                                || workday.equalsIgnoreCase("Thursday"))) {
+                    doctor.setIsAvailable(false);
 
-                    isAvailable=true;
+                } else if (doctor.getNameSurname().equals("Andy Fang") &&
+                        workday.equalsIgnoreCase("Thursday")) {
+
+                    doctor.setIsAvailable(false);
+
+                } else {
+
+                    doctor.setIsAvailable(true);
                 }
-            }
 
+                planner.setAvailable(doctor.getIsAvailable());
+            }
         }
         return planner;
     }
-
 }
 

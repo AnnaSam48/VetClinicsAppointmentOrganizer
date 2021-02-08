@@ -11,6 +11,7 @@ public class VeterinaryDoctor {
     private List<String> daysWhenWork;
     private Duration workPeriod;
     private LocalTime workFinishedAt;
+    private boolean isAvailable;
 
     public VeterinaryDoctor() {
     }
@@ -61,5 +62,13 @@ public class VeterinaryDoctor {
 
     public void setWorkFinishedAt(LocalTime workFinishedAt) {
         this.workFinishedAt = workFinishedAt;
+    }
+
+    public boolean getIsAvailable() {
+        return isAvailable;
+    }
+
+    public void setIsAvailable(boolean available) {
+        isAvailable = available;
     }
 }

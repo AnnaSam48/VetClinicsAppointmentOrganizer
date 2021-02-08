@@ -9,14 +9,16 @@ public class Planner {
    private String day;
    private List<VeterinaryDoctor> doctors;
    private LocalTime workdayStartTime;
+   private boolean available;
 
     public Planner() {
     }
 
-    public Planner(String day, List<VeterinaryDoctor> doctors, LocalTime workdayStartTime) {
+    public Planner(String day, List<VeterinaryDoctor> doctors, LocalTime workdayStartTime, boolean available) {
         this.day = day;
         this.doctors = doctors;
         this.workdayStartTime = workdayStartTime;
+        this.available = available;
     }
 
     public String getDay() {
@@ -41,5 +43,13 @@ public class Planner {
 
     public void setWorkdayStartTime(LocalTime workdayStartTime) {
         this.workdayStartTime = workdayStartTime;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 }

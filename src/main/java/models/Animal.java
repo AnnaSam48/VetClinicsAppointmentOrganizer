@@ -4,15 +4,15 @@ public class Animal {
 
     private boolean wild = false;
     private String type;
-    private String oener;
+    private String owner;
 
     public Animal() {
     }
 
-    public Animal(boolean wild, String type, String oener) {
+    public Animal(boolean wild, String type, String owner) {
         this.wild = wild;
         this.type = type;
-        this.oener = oener;
+        this.owner = owner;
     }
 
     public boolean isWild() {
@@ -31,11 +31,11 @@ public class Animal {
         this.type = type;
     }
 
-    public String getOener() {
-        return oener;
+    public String getOwners() {
+        return owner;
     }
 
-    public void setOener(String oener) {
-        this.oener = oener;
+    public void setOwners(String owner) {
+        this.owner = owner;
     }
 }
