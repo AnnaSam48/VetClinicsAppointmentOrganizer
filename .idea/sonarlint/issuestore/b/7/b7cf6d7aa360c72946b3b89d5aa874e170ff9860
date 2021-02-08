@@ -1,0 +1,22 @@
+
+l
+java:S1192"JDefine a constant instead of duplicating this literal "Wednesday" 5 times.(í€è´ıÿÿÿÿ8˜„ÌÍ÷.
+z
+java:S1104%"XMake workDaysList a static final constant or non-public and provide accessors if needed.(ò¤äııÿÿÿÿ8Ï‡ĞÏ÷.
+i
+java:S1192"GDefine a constant instead of duplicating this literal "Friday" 5 times.(í€è´ıÿÿÿÿ8˜„ÌÍ÷.
+p
+java:S1192"NDefine a constant instead of duplicating this literal "senior doctor" 3 times.(ËşÈÒÿÿÿÿÿ8±¹¦Ì÷.
+y
+java:S1104&"\Make workWeekDayEnums a static final constant or non-public and provide accessors if needed.(şè–Á8²­Ï÷.
+k
+java:S1192"IDefine a constant instead of duplicating this literal "Thursday" 3 times.(ËşÈÒÿÿÿÿÿ8±¹¦Ì÷.
+t
+java:S1104"WMake isAvailable a static final constant or non-public and provide accessors if needed.(ù’ôÿ8öÙ¤Ö÷.
+i
+java:S1192"GDefine a constant instead of duplicating this literal "Monday" 5 times.(í€è´ıÿÿÿÿ8˜„ÌÍ÷.
+M
+java:S14814"+Remove this unused "doctor" local variable.(§Ü´Æşÿÿÿÿ8ÇÌ¨Ö÷.
+j
+java:S1192"HDefine a constant instead of duplicating this literal "Tuesday" 4 times.(í€è´ıÿÿÿÿ8˜„ÌÍ÷.
+J	java:S1084")Either remove or fill this block of code.(§Ü´Æşÿÿÿÿ8÷ê¨Ö÷.

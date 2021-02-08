@@ -1,0 +1,19 @@
+
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+Z
+*src/main/java/models/VeterinaryDoctor.java,1\0\10175ea6127400af551897e79f1052fbeabdb8da
+P
+ src/main/java/models/Animal.java,a\b\abcf4c6d5f3bb9ba21690ebab6b6369480a365ae
+g
+7src/main/java/facade/VetAppointmentOrganizerFacade.java,6\0\6076951007a2d7648f5881482a52bcd072f275ef
+Q
+!src/main/java/models/Planner.java,3\6\36f6c8d9ac43bfc22134e52191ea1d12dd08db62
+Y
+)src/main/java/BaseWeekPlannerFactory.java,c\9\c9137446dd3aa41ad41a96b5c3534c7542edf2d6
+k
+;src/main/java/enums/AppointmentLengthInHoursByTypeEnum.java,2\6\266db83917684f92bfd37f2ee765d5c23d7d1743
+X
+(src/main/java/enums/WorkWeekDayEnum.java,0\7\075744c3d16a2ffa7d73735dc2ba05b11909cb5e
+i
+9src/main/java/generators/EmptyWorkWeekPlannerCreator.java,b\7\b7cf6d7aa360c72946b3b89d5aa874e170ff9860
