@@ -1,6 +1,8 @@
-package models;
+package models.animals;
 
-public class WildAnimal extends Animal{
+import models.animals.Animal;
+
+public class WildAnimal extends Animal {
 
     @Override
     public void setSpecies(String species) {

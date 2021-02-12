@@ -1,6 +1,7 @@
-package generators;
+package generators.appointmentFactories;
 
-import models.PrebookedAppointment;
+import generators.appointmentFactories.AppointmentFactory;
+import models.appointments.PrebookedAppointment;
 
 public class BookedAppointmentFactory extends AppointmentFactory {
     @Override

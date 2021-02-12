@@ -1,6 +1,7 @@
-package generators;
+package generators.appointmentFactories;
 
-import models.EmergencyAppointment;
+import generators.appointmentFactories.AppointmentFactory;
+import models.appointments.EmergencyAppointment;
 
 public class EmergencyAppointmentFactory extends AppointmentFactory {
     @Override

@@ -1,6 +1,6 @@
-package generators;
+package generators.appointmentFactories;
 
-import models.Appointment;
+import models.appointments.Appointment;
 
 abstract public class AppointmentFactory {
 

@@ -1,4 +1,6 @@
-package models;
+package models.animals;
+
+import models.animals.Animal;
 
 public class DomesticAnimal extends Animal {
 

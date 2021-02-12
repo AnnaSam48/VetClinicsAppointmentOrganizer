@@ -1,4 +1,4 @@
-package models;
+package models.animals;
 
 abstract public class Animal {
 

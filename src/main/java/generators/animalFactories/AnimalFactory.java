@@ -1,6 +1,6 @@
-package generators;
+package generators.animalFactories;
 
-import models.Animal;
+import models.animals.Animal;
 
 abstract public class AnimalFactory {
 

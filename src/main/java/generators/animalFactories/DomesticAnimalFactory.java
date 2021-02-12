@@ -1,6 +1,7 @@
-package generators;
+package generators.animalFactories;
 
-import models.DomesticAnimal;
+import generators.animalFactories.AnimalFactory;
+import models.animals.DomesticAnimal;
 
 
 public class DomesticAnimalFactory extends AnimalFactory {

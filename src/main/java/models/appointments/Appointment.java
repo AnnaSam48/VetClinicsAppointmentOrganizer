@@ -1,5 +1,7 @@
-package models;
+package models.appointments;
 
+
+import models.animals.Animal;
 
 import java.time.Duration;
 import java.time.LocalTime;

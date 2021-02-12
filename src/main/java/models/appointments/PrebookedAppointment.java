@@ -1,14 +1,16 @@
-package models;
+package models.appointments;
+
+import models.animals.Animal;
 
 import java.time.Duration;
 import java.time.LocalTime;
 
 
-public class EmergencyAppointment extends Appointment {
+public class PrebookedAppointment extends Appointment {
 
     @Override
     public void setDoctorsName(String doctorsNameSurname) {
-        this.doctorsName = doctorsNameSurname;
+       this.doctorsName = doctorsNameSurname;
     }
 
     @Override
@@ -21,9 +23,11 @@ public class EmergencyAppointment extends Appointment {
         this.timeOfAppointment = timeOfAppointment;
     }
 
+
     @Override
     public void setTypeOfAppointment(String appointmentTypeName) {
-       this.typeOfAppointment = appointmentTypeName;
+        this.typeOfAppointment = appointmentTypeName;
+
     }
 
     @Override
@@ -33,7 +37,6 @@ public class EmergencyAppointment extends Appointment {
 
     @Override
     public void setIsEmergencyAppointment() {
-        this.isEmergencyAppointment = true;
+        this.isEmergencyAppointment = false;
     }
-
 }

@@ -1,6 +1,6 @@
 package facade;
 
-public class VetAppointmentOrganizerFacade {
+public interface VetAppointmentOrganizerFacade {
 
 
 }
