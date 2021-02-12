@@ -1,10 +1,12 @@
 package generators;
 
-import models.Animal;
+import models.WildAnimal;
 
 public class WildAnimalFactory extends AnimalFactory {
+
+
     @Override
-    public Animal createAnimal() {
-        return null;
+    public WildAnimal createAnimal() {
+        return new WildAnimal();
     }
 }

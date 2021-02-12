@@ -4,6 +4,9 @@ import models.Animal;
 
 abstract public class AnimalFactory {
 
-    public abstract Animal createAnimal();
+    public void getCreatedAnimal() {
+        Animal animalCreated = createAnimal();
+    }
 
+    public abstract Animal createAnimal();
 }

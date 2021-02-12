@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.time.LocalTime;
 
 
-public class DomesticAnimalAppointment extends Appointment {
+public class PrebookedAppointment extends Appointment {
 
     @Override
     public void setDoctorsName(String doctorsNameSurname) {
