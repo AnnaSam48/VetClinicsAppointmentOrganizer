@@ -37,7 +37,8 @@ public class WildAnimalAppointment extends Appointment {
     }
 
     @Override
-    public boolean isEmergencyAppointment() {
-        return true;
+    public void isEmergencyAppointment() {
+        isEmergencyAppointment = true;
     }
+
 }

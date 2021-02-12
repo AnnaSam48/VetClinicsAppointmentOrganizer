@@ -29,15 +29,15 @@ public class DomesticAnimalAppointment extends Appointment {
     }
 
     @Override
-    public Duration getLengthOfAppointmentInMinutes() {
+    public void getLengthOfAppointmentInMinutes() {
 
-        return Duration.ofMinutes(AppointmentLengthInMinutesByTypeEnum.
+        this. Duration.ofMinutes(AppointmentLengthInMinutesByTypeEnum.
                 valueOf(appointmentTypeName.toUpperCase())
                 .getAppointmentLengthInMinutes());
     }
 
     @Override
-    public boolean isEmergencyAppointment() {
-        return false;
+    public void isEmergencyAppointment() {
+        isEmergencyAppointment = false;
     }
 }

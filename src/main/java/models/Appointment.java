@@ -12,11 +12,13 @@ public abstract class Appointment {
     protected boolean isEmergencyAppointment;
 
 
-    public abstract String getDoctorsName();
+    public abstract void getDoctorsName();
 
-    public abstract Duration getLengthOfAppointmentInMinutes();
+    public abstract void getLengthOfAppointmentInMinutes();
 
-    public abstract String getTypeOfAppointment();
+    public abstract void getTypeOfAppointment();
 
-    public abstract boolean isEmergencyAppointment();
+    public abstract void isEmergencyAppointment();
+
+
 }

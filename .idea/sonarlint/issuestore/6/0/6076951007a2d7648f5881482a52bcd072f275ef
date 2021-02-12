@@ -1,11 +1,3 @@
 
-W
-java:S1118":Add a private constructor to hide the implicit public one.(Ë»ýŽ8µÞÞ÷ö.
-N
-java:S1068"1Remove this unused "WORKING_HOURS" private field.(þ±Ÿå8µÞÞ÷ö.
-u
-java:S3008"XRename this field "WORKING_HOURS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þ±Ÿå8µÞÞ÷ö.
-]
-java:S1068";Remove this unused "PART_TIME_WORKING_HOURS" private field.(ø¡…ôøÿÿÿÿ8Ú®ô÷ö.
-„
-java:S3008"bRename this field "PART_TIME_WORKING_HOURS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ø¡…ôøÿÿÿÿ8Ú®ô÷ö.
+_
+java:S2094"BRemove this empty class, write its code or make it an "interface".(Ë»ýŽ8ÜÁ‘‘ø.
