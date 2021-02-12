@@ -1,44 +1,39 @@
 package models;
 
-import enums.AppointmentLengthInMinutesByTypeEnum;
-import enums.RandomEnumLogicClass;
-
-import java.security.SecureRandom;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.time.LocalTime;
+
 
 public class WildAnimalAppointment extends Appointment {
-    private static final SecureRandom random = new SecureRandom();
-    private static final List<String> doctorsNamesList  = new ArrayList<>(Arrays.asList("Andy Fang", "Lewis Talon", "Peter Tooth", "Lauren Tail", "Oliver Tail"));
-    String appointmentTypeName;
-
 
     @Override
-    public String getDoctorsName() {
-        int randomDoctorIndex = random.nextInt(doctorsNamesList.size());
-        return doctorsNamesList.get(randomDoctorIndex);
+    public void setDoctorsName(String doctorsNameSurname) {
+        this.doctorsName = doctorsNameSurname;
     }
 
     @Override
-    public String getTypeOfAppointment() {
-        AppointmentLengthInMinutesByTypeEnum appointmentType = RandomEnumLogicClass.
-                randomEnum(AppointmentLengthInMinutesByTypeEnum.class);
-        appointmentTypeName = appointmentType.name();
-        return appointmentTypeName;
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
     }
 
     @Override
-    public Duration getLengthOfAppointmentInMinutes() {
-        return Duration.ofMinutes(AppointmentLengthInMinutesByTypeEnum
-                .valueOf(appointmentTypeName.toUpperCase())
-                .getAppointmentLengthInMinutes());
+    public void setTimeOfAppointment(LocalTime timeOfAppointment) {
+        this.timeOfAppointment = timeOfAppointment;
     }
 
     @Override
-    public void isEmergencyAppointment() {
-        isEmergencyAppointment = true;
+    public void setTypeOfAppointment(String appointmentTypeName) {
+       this.typeOfAppointment = appointmentTypeName;
+    }
+
+    @Override
+    public void setLengthOfAppointmentInMinutes(Duration lengthOfAppointment) {
+        this.lengthOfAppointmentInMinutes = lengthOfAppointment;
+    }
+
+    @Override
+    public void setIsEmergencyAppointment() {
+        this.isEmergencyAppointment = true;
     }
 
 }

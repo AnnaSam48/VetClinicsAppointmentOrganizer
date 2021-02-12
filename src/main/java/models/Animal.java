@@ -5,9 +5,9 @@ abstract public class Animal {
     protected String species;
     protected boolean isWildAnimal;
 
-    abstract String getSpecies();
+    abstract void setSpecies(String species);
 
-    abstract boolean getIsWildAnimal();
+    abstract void isWildAnimal();
 
 
 }
