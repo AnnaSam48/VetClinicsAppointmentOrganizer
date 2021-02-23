@@ -1,13 +1,13 @@
 package generators.animalFactories;
 
-import generators.animalFactories.AnimalFactory;
 import models.animals.DomesticAnimal;
+import models.appointments.Appointment;
 
 
 public class DomesticAnimalFactory extends AnimalFactory {
 
     @Override
-    public DomesticAnimal createAnimal() {
+    public DomesticAnimal createAnimal(Appointment appointment) {
         return new DomesticAnimal();
     }
 }

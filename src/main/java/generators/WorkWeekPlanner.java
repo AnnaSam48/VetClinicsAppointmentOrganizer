@@ -4,6 +4,7 @@ import enums.WorkWeekDayEnum;
 import models.Planner;
 import models.VeterinaryDoctor;
 
+import java.time.Duration;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,11 +13,13 @@ import java.util.List;
 
 public class WorkWeekPlanner {
     static final LocalTime WORKDAY_START = LocalTime.of(9, 00);
+    static final LocalTime WORKDAY_END_PART_TIME = LocalTime.of(14,00);
+    static final LocalTime WORKDAY_END_FULL_TIME = LocalTime.of(18,00);
 
     List<VeterinaryDoctor> doctorsList = Arrays.asList(
             new VeterinaryDoctor("Andy Fang",
                     "junior doctor", Arrays.asList("Monday", "Tuesday", "Wednesday", "Friday"),
-                    java.time.Duration.ofHours(4), (WORKDAY_START.plusHours(4))),
+                    java.time.Duration.ofHours(5), (WORKDAY_START.plusHours(5))),
             new VeterinaryDoctor("Lewis Talon",
                     "retiring doctor", Arrays.asList("Monday", "Wednesday", "Friday"),
                     java.time.Duration.ofHours(5), WORKDAY_START.plusHours(5)),
@@ -43,11 +46,15 @@ public class WorkWeekPlanner {
 
     public Planner getPlannerWithNoBookedAppointments() {
         Planner planner = new Planner();
-        for (String workday : workDaysList) {
+        planner.setAllWorkdays(getWorkDaysList());
+
+        for (String workday : getWorkDaysList()) {
             planner.setDay(workday);
             planner.setWorkdayStartTime(WORKDAY_START);
             planner.setDoctors(doctorsList);
+
             for (VeterinaryDoctor doctor : planner.getDoctors()) {
+
                 if (doctor.getNameSurname().equals("Lewis Talon") &&
                         (workday.equalsIgnoreCase("Tuesday")
                                 || workday.equalsIgnoreCase("Thursday"))) {
@@ -60,8 +67,7 @@ public class WorkWeekPlanner {
                     doctor.setIsAvailable(false);
 
                 } else {
-
-                    doctor.setIsAvailable(true);
+                        doctor.setIsAvailable(true);
                 }
 
                 planner.setAvailable(doctor.getIsAvailable());

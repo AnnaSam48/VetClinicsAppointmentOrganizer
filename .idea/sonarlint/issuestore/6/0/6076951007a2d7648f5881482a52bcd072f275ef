@@ -1,3 +1,27 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(Ë»ı8ÜÁ‘‘ø.
+T
+java:S1135$"2Complete the task associated to this TODO comment.(ÊüÑÖüÿÿÿÿ8â®üú.
+Q
+java:S1144X"4Remove this unused private "getRandomAnimal" method.(•Òß8Œº…ú.
+c
+java:S1068"ARemove this unused "BOOKED_APPOINTMENT_TIME_START" private field.(°Ú½Ëøÿÿÿÿ8­¡ò„ú.
+Z	java:S106k"9Replace this use of System.out or System.err by a logger.(°ò›ƒüÿÿÿÿ8²ó†‚ú.
+X	java:S125|"<This block of commented-out lines of code should be removed.(ìÈ´ı8’²Œ†ú.
+J
+java:S1481@"(Remove this unused "day" local variable.(ò“äÑüÿÿÿÿ8ûñ˜‡ú.
+f
+java:S1854>"DRemove this useless assignment to local variable "workDayStartTime".(Š°õöùÿÿÿÿ8²ó†‚ú.
+W
+java:S1481>"5Remove this unused "workDayStartTime" local variable.(Š°õöùÿÿÿÿ8²ó†‚ú.
+g
+java:S1172d"ERemove this unused method parameter "alreadyExistingAppointmentList".(§Ë¨µúÿÿÿÿ8î¢Ğ†ú.
+T
+java:S11357"2Complete the task associated to this TODO comment.(ËŒ·¶şÿÿÿÿ8²ó†‚ú.
+V
+java:S1068"4Remove this unused "veterinaryDoctor" private field.(ù¾ëûÿÿÿÿ8‚âÛ¸ù.
+^
+java:S1068 "ARemove this unused "BOOKED_APPOINTMENT_START_TIME" private field.(˜Ñ±¨8­¡ò„ú.
+L
+java:S1068"*Remove this unused "animal" private field.(¡¥ä•ùÿÿÿÿ8ôôñ·ù.
+M
+java:S1481A"+Remove this unused "doctor" local variable.(§Ü´Æşÿÿÿÿ8¤ôŸ‡ú.

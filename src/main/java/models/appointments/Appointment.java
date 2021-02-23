@@ -12,6 +12,7 @@ public abstract class Appointment {
     protected Animal animal;
     protected LocalTime timeOfAppointment;
     protected Duration lengthOfAppointmentInMinutes;
+    protected LocalTime appointmentEndTime;
     protected String typeOfAppointment;
     protected boolean isEmergencyAppointment;
 
@@ -23,6 +24,8 @@ public abstract class Appointment {
     public abstract void setTimeOfAppointment(LocalTime timeOfAppointment);
 
     public abstract void setLengthOfAppointmentInMinutes(Duration lengthOfAppointmentInMinutes);
+
+    public abstract void setAppointmentEndTime(LocalTime appointmentEndTime);
 
     public abstract void setTypeOfAppointment(String typeOfAppointment);
 

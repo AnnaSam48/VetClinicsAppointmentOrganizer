@@ -1,12 +1,9 @@
 package generators.animalFactories;
 
 import models.animals.Animal;
+import models.appointments.Appointment;
 
 abstract public class AnimalFactory {
 
-    public void getCreatedAnimal() {
-        Animal animalCreated = createAnimal();
-    }
-
-    public abstract Animal createAnimal();
+    public abstract Animal createAnimal(Appointment appointment);
 }

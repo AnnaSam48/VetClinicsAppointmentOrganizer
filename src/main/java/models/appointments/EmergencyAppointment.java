@@ -34,6 +34,11 @@ public class EmergencyAppointment extends Appointment {
     }
 
     @Override
+    public void setAppointmentEndTime(LocalTime appointmentEndTime) {
+
+    }
+
+    @Override
     public void setIsEmergencyAppointment() {
         this.isEmergencyAppointment = true;
     }
