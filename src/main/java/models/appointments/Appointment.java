@@ -1,6 +1,7 @@
 package models.appointments;
 
 
+import models.TimeSlot;
 import models.animals.Animal;
 
 import java.time.Duration;
@@ -15,6 +16,7 @@ public abstract class Appointment {
     protected LocalTime appointmentEndTime;
     protected String typeOfAppointment;
     protected boolean isEmergencyAppointment;
+    protected TimeSlot timeSlot;
 
 
     public abstract void setDoctorsName(String doctorsName);
@@ -30,5 +32,6 @@ public abstract class Appointment {
     public abstract void setTypeOfAppointment(String typeOfAppointment);
 
     public abstract void setIsEmergencyAppointment();
+    public abstract void setTimeSlot();
 
 }

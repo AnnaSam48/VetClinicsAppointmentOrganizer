@@ -44,4 +44,9 @@ public class PrebookedAppointment extends Appointment {
     public void setIsEmergencyAppointment() {
         this.isEmergencyAppointment = false;
     }
+
+    @Override
+    public void setTimeSlot() {
+
+    }
 }

@@ -4,7 +4,7 @@ public enum WorkWeekDayEnum {
 
     MONDAY,
     TUESDAY,
-    WEDNESDAY,
-    THURSDAY,
-    FRIDAY,
+ //   WEDNESDAY,
+ //   THURSDAY,
+ //   FRIDAY,
 }

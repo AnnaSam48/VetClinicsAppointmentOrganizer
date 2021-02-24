@@ -5,5 +5,5 @@ import models.appointments.Appointment;
 
 abstract public class AnimalFactory {
 
-    public abstract Animal createAnimal(Appointment appointment);
+    public abstract Animal createAnimal();
 }

@@ -7,7 +7,7 @@ import models.appointments.Appointment;
 public class DomesticAnimalFactory extends AnimalFactory {
 
     @Override
-    public DomesticAnimal createAnimal(Appointment appointment) {
+    public DomesticAnimal createAnimal() {
         return new DomesticAnimal();
     }
 }

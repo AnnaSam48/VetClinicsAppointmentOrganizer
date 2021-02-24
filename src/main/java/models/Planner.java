@@ -9,13 +9,13 @@ import java.util.List;
 public class Planner {
 
     private List<String> allWorkdays;
-   private String day;
-   private List<VeterinaryDoctor> doctors;
-   private LocalTime workdayStartTime;
-   private Appointment appointment;
-   private LocalTime workdayEndTimeForFullTimeDoctors;
-   private List<Appointment> appointmentList;
-   private boolean available;
+    private String day;
+    private List<VeterinaryDoctor> doctors;
+    private LocalTime workdayStartTime;
+    private Appointment appointment;
+    private LocalTime workdayEndTimeForFullTimeDoctors;
+    private List<Appointment> appointmentList;
+    private boolean available;
 
     public Planner() {
     }

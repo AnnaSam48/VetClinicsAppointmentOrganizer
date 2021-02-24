@@ -7,8 +7,7 @@ public class WildAnimalFactory extends AnimalFactory {
 
 
     @Override
-    public WildAnimal createAnimal(Appointment appointment) {
-        if(appointment.getClass().isInstance())
+    public WildAnimal createAnimal() {
         return new WildAnimal();
     }
 }

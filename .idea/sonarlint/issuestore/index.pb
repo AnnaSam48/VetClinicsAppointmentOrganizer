@@ -37,8 +37,6 @@ k
 ;src/main/java/models/appointments/PrebookedAppointment.java,7\2\7243646bb9cb431e3f409cbbcde00990136dedf3
 b
 2src/main/java/models/appointments/Appointment.java,9\7\978120b761863a6eb063ee7d32441cf1a0c9334b
-j
-:src/main/java/generators/factories/AppointmentFactory.java,0\f\0fa5d9d5b15271ec6ee4449c891117c5a8d8646c
 l
 <src/main/java/generators/strategies/AppointmentStrategy.java,a\b\ab2d6566ef2b4c7f6cbfdfd8288b784a764c7494
 k

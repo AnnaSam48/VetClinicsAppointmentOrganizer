@@ -43,4 +43,9 @@ public class EmergencyAppointment extends Appointment {
         this.isEmergencyAppointment = true;
     }
 
+    @Override
+    public void setTimeSlot() {
+
+    }
+
 }

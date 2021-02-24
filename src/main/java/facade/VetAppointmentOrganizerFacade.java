@@ -1,5 +1,5 @@
 package facade;
-
+/*
 import enums.AppointmentLengthInMinutesByTypeEnum;
 import enums.RandomEnumLogicClass;
 import generators.WorkWeekPlanner;
@@ -54,7 +54,7 @@ public class VetAppointmentOrganizerFacade {
      */
     //TODO: Make a list of existing appointments -> focus on time slots time:doctor
 
-
+/*
     public void bookAppointment(){
 
         List<VeterinaryDoctor> doctorsList = newPlanner.getDoctors();
@@ -119,7 +119,7 @@ public class VetAppointmentOrganizerFacade {
         return appointmentType.name();
     }
 }
-
+*/
 /*
 int secondsOfEmergencyStartTime = (EMERGENCY_APPOINTMENT_TIME_START.toSecondOfDay());
         int minutesOfEmergencyFinishTime = (EMERGENCY_APPOINTMENT_TIME_FINISH.toSecondOfDay());
