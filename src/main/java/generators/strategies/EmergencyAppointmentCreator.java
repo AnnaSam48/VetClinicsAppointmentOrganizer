@@ -1,4 +1,4 @@
-package generators.strategies;
+/*package generators.strategies;
 
 import models.animals.Animal;
 import models.appointments.Appointment;
@@ -12,3 +12,4 @@ public class EmergencyAppointmentCreator implements AppointmentStrategy {
         return null;
     }
 }
+*/

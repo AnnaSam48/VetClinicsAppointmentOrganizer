@@ -1,21 +1,18 @@
 package facade;
-/*
-import enums.AppointmentLengthInMinutesByTypeEnum;
-import enums.RandomEnumLogicClass;
+
+import enums.WorkWeekDayEnum;
 import generators.WorkWeekPlanner;
-import generators.strategies.AppointmentFactory;
 import models.Planner;
+import models.TimeSlot;
 import models.VeterinaryDoctor;
 import models.animals.Animal;
 import models.appointments.Appointment;
 
+import java.io.PrintStream;
 import java.security.SecureRandom;
-import java.time.Duration;
-import java.time.LocalTime;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class VetAppointmentOrganizerFacade {
 
@@ -24,15 +21,8 @@ public class VetAppointmentOrganizerFacade {
     private Planner weekPlanner;
     private static final WorkWeekPlanner workPlanner = new WorkWeekPlanner();
     private static final SecureRandom random = new SecureRandom();
-    private static final LocalTime EMERGENCY_APPOINTMENT_TIME_START = LocalTime.of(9,00);
-    //The emergency appointments can be till 12:00, but they can only be made till 11:30 as 30 minutes is the shortest possible appointment
-    private static final LocalTime EMERGENCY_APPOINTMENT_TIME_FINISH = LocalTime.of(11,30);
-    private static final LocalTime BOOKED_APPOINTMENT_TIME_START = LocalTime.of(12,00);
-    //The appointments can be till 18:00, but they can only be made till 17:30 as 30 minutes is the shortest possible appointment
-    private static final LocalTime BOOKED_APPOINTMENT_START_TIME = LocalTime.of(18, 00);
-    Planner newPlanner = getWeekPlannerWithAllAvailableDays();
     List<Appointment> bookedAppointmentList = new ArrayList<>();
-    private AppointmentFactory appointmentFactory = new AppointmentFactory();
+
     /*TODO: appointment logic:
     Create random appointment (time first -> doctor -> animal)
     Set appointment following logic:
@@ -41,7 +31,12 @@ public class VetAppointmentOrganizerFacade {
     2) then generate animal:
     if hours between 09.00 - 12.00 then emergency animal generation logic (at least 5 wild animals,
      after wild and domestic animals can be generated)
-     3) set appointment details (?what to do with different workdays)
+
+    Necessary info for Appointment:
+    1)Timeslot random generated
+    2)Doctor random generated - if doctor has appointment set isAvailable to false
+    3)Appointment type
+    4)Animal random depends on timeslot
 
 
      !Idea for emergency appointments - make random time between 9.00-12.00 therefore no need to check
@@ -51,80 +46,117 @@ public class VetAppointmentOrganizerFacade {
      1) The max amount of appointments for the day is reached (when five doctors available in the day
      30 max, when less doctors for each doctor missing -6 appointments)
      2)when appointments for the week are all booked
-     */
+
     //TODO: Make a list of existing appointments -> focus on time slots time:doctor
 
-/*
+*/
     public void bookAppointment(){
 
-        List<VeterinaryDoctor> doctorsList = newPlanner.getDoctors();
-        List<String> daysList = newPlanner.getAllWorkdays();
-        LocalTime workDayStartTime =newPlanner.getWorkdayStartTime();
+        Planner newPlanner = getWeekPlanner();
 
-        for(String day : daysList){
-            for(VeterinaryDoctor doctor : doctorsList){
-                if(newPlanner.isAvailable()){
-                    //generate emergency appointments 09:00-11.30
-                    Appointment newAppointment = appointmentFactory.createAppointment(EMERGENCY_APPOINTMENT_TIME_START, EMERGENCY_APPOINTMENT_TIME_FINISH);
-                    newAppointment.setTimeOfAppointment(getRandomAppointmentTime(EMERGENCY_APPOINTMENT_TIME_START, EMERGENCY_APPOINTMENT_TIME_FINISH));
-                    newAppointment.setTypeOfAppointment(getRandomAppointmentType());
-                    newAppointment.setLengthOfAppointmentInMinutes();
-                    newAppointment.setAppointmentEndTime();
-                    newAppointment.setIsEmergencyAppointment();
-                    newAppointment.setDoctorsName();
-                    newAppointment.setAnimal();
-                    bookedAppointmentList.add(newAppointment);
 
+
+
+
+
+    }
+
+    public Planner getWeekPlanner(){
+        Planner newWeekPlanner = new Planner();
+        newWeekPlanner.setDaysList(getWorkDaysList());
+        newWeekPlanner.setVeterinaryDoctorsList(getAllDoctors());
+        newWeekPlanner.setTimeslotList(getAllAppointmentTimeSlotList());
+        for(String workday : getWorkDaysList()){
+            newWeekPlanner.setDay(workday);
+            for(VeterinaryDoctor doctor : getAllDoctors()){
+                newWeekPlanner.setVeterinaryDoctor(doctor);
+                for (TimeSlot appointmentTimeSlot : getAllAppointmentTimeSlotList()){
+                    appointmentTimeSlot.setDoctorsName(doctor.getNameSurname());
+                    newWeekPlanner.setTimeSlot(appointmentTimeSlot);
                 }
             }
         }
-
-
-
-
-
+        return newWeekPlanner;
     }
 
-    private Animal getRandomAnimal(){
-        return null;
+    public List<String> getWorkDaysList() {
+        List<String> workDaysList = new ArrayList<>();
+        WorkWeekDayEnum[] workWeekDayEnums = WorkWeekDayEnum.values();
+        for (WorkWeekDayEnum day : workWeekDayEnums) {
+            workDaysList.add(day.toString());
+        }
+        return workDaysList;
     }
 
-    protected LocalTime getRandomAppointmentTime(LocalTime timeRangeStart, LocalTime timeRangeFinish) {
-        int secondsOfAppointmentRangeStartTime = (timeRangeStart.toSecondOfDay());
-        int secondsOfAppointmentRangeFinishTime = (timeRangeFinish.toSecondOfDay());
-        int randomAppointmentTimeInSeconds = secondsOfAppointmentRangeStartTime +
-                random.nextInt(secondsOfAppointmentRangeFinishTime - secondsOfAppointmentRangeStartTime);
-        return LocalTime.ofSecondOfDay(randomAppointmentTimeInSeconds).truncatedTo(ChronoUnit.MINUTES);
+    protected List<VeterinaryDoctor> getAllDoctors(){
+        return Arrays.asList(
+                new VeterinaryDoctor("Peter Tooth"),
+                new VeterinaryDoctor("Lauren Tail"),
+                new VeterinaryDoctor("Oliver Tail"));
     }
-    protected VeterinaryDoctor getRandomAvailableDoctor(List<VeterinaryDoctor> availableDoctors,
-                                                        List<Appointment> alreadyExistingAppointmentList){
+
+    protected List<TimeSlot> getAllAppointmentTimeSlotList(){
+        List<TimeSlot> timeSlotList = new ArrayList<>();
+        for (int i = 0; i < 9; i++) {
+            TimeSlot timeSlot = new TimeSlot();
+            timeSlot.setSlotNumber(i + 1);
+            String timeslotName = "Timeslot " + (i+1);
+            timeSlot.setSlotName(timeslotName);
+            timeSlot.setIsAvailable(true);
+            timeSlotList.add(timeSlot);
+        }
+        return timeSlotList;
+    }
+
+    protected TimeSlot getRandomTimeslot(){
+        int randomTimeslotIndex = random.nextInt(getAllAppointmentTimeSlotList().size());
+        return getAllAppointmentTimeSlotList().get(randomTimeslotIndex);
+    }
+
+    protected VeterinaryDoctor getRandomAvailableDoctor(List<VeterinaryDoctor> availableDoctors){
         int randomDoctorIndex = random.nextInt(availableDoctors.size());
         return availableDoctors.get(randomDoctorIndex);
     }
 
-    public Planner getWeekPlannerWithAllAvailableDays(){
-        weekPlanner = workPlanner.getPlannerWithNoBookedAppointments();
-        System.out.print(weekPlanner.toString());
-        return weekPlanner;
-    }
-    public List<VeterinaryDoctor> getPartTimeDoctors(){
-        //get part time doctors list
-        return weekPlanner.getDoctors().stream().filter(doctor -> doctor
-                .getWorkPeriod().compareTo(Duration.ofHours(9)) <0).collect(Collectors.toList());
+    public void printEmptyPlanner(){
+      getWeekPlanner().getDaysList().forEach(day -> System.out.print("                                      "
+              + day +
+              "                                 ||                           " ));
+        System.out.println();
+        System.out.println("================================================================="
+                +"======================================================================================================"
+                + "====================================================================================================="
+                + "====================================================================================================="
+                + "=====================================================================================================");
+        getWeekPlanner().getDaysList()
+                .forEach(day -> getWeekPlanner().getVeterinaryDoctorsList()
+                        .forEach(doctor -> {System.out.print("             " +doctor.getNameSurname() + "    || ");}));
+        System.out.println();
+        System.out.println("================================================================="
+                +"======================================================================================================"
+                + "====================================================================================================="
+                + "====================================================================================================="
+                + "=====================================================================================================");
+        getWeekPlanner().getDaysList()
+                .forEach(day -> getWeekPlanner().getVeterinaryDoctorsList()
+                        .forEach(doctor -> getWeekPlanner().getTimeslotList()
+                                .forEach(timeSlot -> {
+            System.out.print(timeSlot.getSlotName() + " || ");
+                                    getWeekPlanner().getDaysList().forEach(dayInList -> getWeekPlanner()
+                                            .getVeterinaryDoctorsList()
+                                            .forEach(doctor1 -> System.out.print(" " + timeSlot.getIsAvailable() + " || ")));
+                                    System.out.println();
+                                    System.out.println("================================================================="
+                                            +"======================================================================================================"
+                                            + "====================================================================================================="
+                                            + "====================================================================================================="
+                                            + "=====================================================================================================");
+
+        })));
+
+
     }
 
-    public String getRandomAppointmentType() {
-        AppointmentLengthInMinutesByTypeEnum appointmentType = RandomEnumLogicClass.
-                randomEnum(AppointmentLengthInMinutesByTypeEnum.class);
-        return appointmentType.name();
-    }
 }
-*/
-/*
-int secondsOfEmergencyStartTime = (EMERGENCY_APPOINTMENT_TIME_START.toSecondOfDay());
-        int minutesOfEmergencyFinishTime = (EMERGENCY_APPOINTMENT_TIME_FINISH.toSecondOfDay());
-        int randomAppointmentTimeInSeconds = secondsOfEmergencyStartTime +
-                random.nextInt(minutesOfEmergencyFinishTime -secondsOfEmergencyStartTime);
-        return LocalTime.ofSecondOfDay(randomAppointmentTimeInSeconds).truncatedTo(ChronoUnit.MINUTES);
-* */
+
 

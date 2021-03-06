@@ -1,51 +1,34 @@
 package models.appointments;
 
-import models.animals.Animal;
 
-import java.time.Duration;
-import java.time.LocalTime;
+import enums.AppointmentTypeEnum;
+import enums.RandomEnumLogicClass;
+import models.TimeSlot;
+import models.VeterinaryDoctor;
+import models.animals.Animal;
 
 
 public class EmergencyAppointment extends Appointment {
 
     @Override
-    public void setDoctorsName(String doctorsNameSurname) {
-        this.doctorsName = doctorsNameSurname;
+    TimeSlot setAppointmentTimeslot(TimeSlot timeSlot) {
+        return timeSlot;
     }
 
     @Override
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    String getAppointmentType() {
+        AppointmentTypeEnum appointmentType = RandomEnumLogicClass.
+                randomEnum(AppointmentTypeEnum.class);
+        return appointmentType.name();
     }
 
     @Override
-    public void setTimeOfAppointment(LocalTime timeOfAppointment) {
-        this.timeOfAppointment = timeOfAppointment;
+    Animal setAnimalForAppointment(Animal animalForAppointment) {
+        return animalForAppointment;
     }
 
     @Override
-    public void setTypeOfAppointment(String appointmentTypeName) {
-       this.typeOfAppointment = appointmentTypeName;
+    VeterinaryDoctor setDoctorForAppointment(VeterinaryDoctor doctor) {
+        return doctor;
     }
-
-    @Override
-    public void setLengthOfAppointmentInMinutes(Duration lengthOfAppointment) {
-        this.lengthOfAppointmentInMinutes = lengthOfAppointment;
-    }
-
-    @Override
-    public void setAppointmentEndTime(LocalTime appointmentEndTime) {
-
-    }
-
-    @Override
-    public void setIsEmergencyAppointment() {
-        this.isEmergencyAppointment = true;
-    }
-
-    @Override
-    public void setTimeSlot() {
-
-    }
-
 }

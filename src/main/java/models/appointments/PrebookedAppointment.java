@@ -1,52 +1,52 @@
 package models.appointments;
 
+import enums.AppointmentTypeEnum;
+import enums.RandomEnumLogicClass;
+import models.TimeSlot;
+import models.VeterinaryDoctor;
 import models.animals.Animal;
 
-import java.time.Duration;
-import java.time.LocalTime;
-
+import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PrebookedAppointment extends Appointment {
 
-    @Override
-    public void setDoctorsName(String doctorsNameSurname) {
-       this.doctorsName = doctorsNameSurname;
+    private static final SecureRandom timeSlotRandom = new SecureRandom();
+
+    private List<TimeSlot> getTimeSlotList () {
+        List<TimeSlot> timeSlotList = new ArrayList<>();
+        for (int i = 3; i < 9; i++) {
+            TimeSlot timeSlot = new TimeSlot();
+            timeSlot.setSlotNumber(i + 1);
+            String timeslotName = "Timeslot " + (i+1);
+            timeSlot.setSlotName(timeslotName);
+            timeSlot.setIsAvailable(true);
+            timeSlotList.add(timeSlot);
+        }
+        return timeSlotList;
     }
 
     @Override
-    public void setAnimal(Animal animal) {
-        this.animal = animal;
+    TimeSlot getAppointmentTimeslot() {
+        int randomTimeslotIndex = timeSlotRandom.nextInt(getTimeSlotList().size());
+        return getTimeSlotList().get(randomTimeslotIndex);
     }
 
     @Override
-    public void setTimeOfAppointment(LocalTime timeOfAppointment) {
-        this.timeOfAppointment = timeOfAppointment;
-    }
-
-
-    @Override
-    public void setTypeOfAppointment(String appointmentTypeName) {
-        this.typeOfAppointment = appointmentTypeName;
-
+    String getAppointmentType() {
+        AppointmentTypeEnum appointmentType = RandomEnumLogicClass.
+                randomEnum(AppointmentTypeEnum.class);
+        return appointmentType.name();
     }
 
     @Override
-    public void setLengthOfAppointmentInMinutes(Duration lengthOfAppointment) {
-        this.lengthOfAppointmentInMinutes = lengthOfAppointment;
+    Animal setAnimalForAppointment(Animal animalForAppointment) {
+        return animalForAppointment;
     }
 
     @Override
-    public void setAppointmentEndTime(LocalTime appointmentEndTime) {
-
-    }
-
-    @Override
-    public void setIsEmergencyAppointment() {
-        this.isEmergencyAppointment = false;
-    }
-
-    @Override
-    public void setTimeSlot() {
-
+    VeterinaryDoctor setDoctorForAppointment(VeterinaryDoctor doctor) {
+        return doctor;
     }
 }

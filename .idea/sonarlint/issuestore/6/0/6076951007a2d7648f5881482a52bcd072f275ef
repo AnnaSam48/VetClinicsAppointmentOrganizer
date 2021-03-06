@@ -1,27 +1,37 @@
 
-T
-java:S1135$"2Complete the task associated to this TODO comment.(ÊüÑÖüÿÿÿÿ8â®üú.
-Q
-java:S1144X"4Remove this unused private "getRandomAnimal" method.(•Òß8Œº…ú.
-c
-java:S1068"ARemove this unused "BOOKED_APPOINTMENT_TIME_START" private field.(°Ú½Ëøÿÿÿÿ8­¡ò„ú.
-Z	java:S106k"9Replace this use of System.out or System.err by a logger.(°ò›ƒüÿÿÿÿ8²ó†‚ú.
-X	java:S125|"<This block of commented-out lines of code should be removed.(ìÈ´ı8’²Œ†ú.
-J
-java:S1481@"(Remove this unused "day" local variable.(ò“äÑüÿÿÿÿ8ûñ˜‡ú.
-f
-java:S1854>"DRemove this useless assignment to local variable "workDayStartTime".(Š°õöùÿÿÿÿ8²ó†‚ú.
-W
-java:S1481>"5Remove this unused "workDayStartTime" local variable.(Š°õöùÿÿÿÿ8²ó†‚ú.
-g
-java:S1172d"ERemove this unused method parameter "alreadyExistingAppointmentList".(§Ë¨µúÿÿÿÿ8î¢Ğ†ú.
-T
-java:S11357"2Complete the task associated to this TODO comment.(ËŒ·¶şÿÿÿÿ8²ó†‚ú.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(óò¾¦øÿÿÿÿ8Ù©ûøş.
 V
-java:S1068"4Remove this unused "veterinaryDoctor" private field.(ù¾ëûÿÿÿÿ8‚âÛ¸ù.
-^
-java:S1068 "ARemove this unused "BOOKED_APPOINTMENT_START_TIME" private field.(˜Ñ±¨8­¡ò„ú.
+java:S1068"4Remove this unused "veterinaryDoctor" private field.(ù¾ëûÿÿÿÿ8Š÷©ş.
+V	java:S106"9Replace this use of System.out or System.err by a logger.(å¼ñ”8ó‰„ùş.
+Q
+java:S1068"/Remove this unused "workPlanner" private field.(¡ºşéúÿÿÿÿ8«Áß¥ş.
 L
-java:S1068"*Remove this unused "animal" private field.(¡¥ä•ùÿÿÿÿ8ôôñ·ù.
+java:S1068"/Remove this unused "weekPlanner" private field.(Å°ï¼8Àâ½öş.
+[	java:S106Š"9Replace this use of System.out or System.err by a logger.(ÿê°äüÿÿÿÿ8ìâŠùş.
+Z	java:S106t"9Replace this use of System.out or System.err by a logger.(‡ÄõÙúÿÿÿÿ8üîøş.
+T
+java:S1135"2Complete the task associated to this TODO comment.(ÊüÑÖüÿÿÿÿ8â®üú.
+[	java:S106"9Replace this use of System.out or System.err by a logger.(ı„ìóûÿÿÿÿ8–Î©ûş.
+[	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¶“€ûş.
+[	java:S106€"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8åÃùş.
+Q
+java:S14817"/Remove this unused "newPlanner" local variable.(›Ñ–”ùÿÿÿÿ8“íìöş.
+T
+java:S11352"2Complete the task associated to this TODO comment.(ËŒ·¶şÿÿÿÿ8²ó†‚ú.
+V	java:S106"9Replace this use of System.out or System.err by a logger.(å¼ñ”8ÓÈ­úş.
+Ä
+java:S1192z"¦Define a constant instead of duplicating this literal "=====================================================================================================" 9 times.(ˆê½8ó‰„ùş.
+ 
+java:S1192x"‚Define a constant instead of duplicating this literal "=================================================================" 3 times.(å¼ñ”8ñÔ®úş.
 M
-java:S1481A"+Remove this unused "doctor" local variable.(§Ü´Æşÿÿÿÿ8¤ôŸ‡ú.
+java:S1128"0Remove this unused import 'java.io.PrintStream'.(×ê’8ŒÏâøş.
+L
+java:S1068"*Remove this unused "animal" private field.(¡¥ä•ùÿÿÿÿ8Š÷©ş.
+Z	java:S106w"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ÔÓ€ùş.
+Å
+java:S1192y"§Define a constant instead of duplicating this literal "======================================================================================================" 3 times.(üÒı8ñÔ®úş.
+U	java:S106x"9Replace this use of System.out or System.err by a logger.(å¼ñ”8ŒÏâøş.
+`
+java:S18547">Remove this useless assignment to local variable "newPlanner".(›Ñ–”ùÿÿÿÿ8“íìöş.
+N
+java:S1602",Remove useless curly braces around statement(óò¾¦øÿÿÿÿ8Ù©ûøş.

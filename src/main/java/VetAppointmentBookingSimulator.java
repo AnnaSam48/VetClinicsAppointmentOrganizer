@@ -1,10 +1,11 @@
-import generators.WorkWeekPlanner;
+import facade.VetAppointmentOrganizerFacade;
 
 public class VetAppointmentBookingSimulator {
 
     public static void main(String[] args) {
-        WorkWeekPlanner workWeekPlanner = new WorkWeekPlanner();
-        workWeekPlanner.printPlanner();
+        VetAppointmentOrganizerFacade facade = new VetAppointmentOrganizerFacade();
+        facade.printEmptyPlanner();
+
     }
 
 }

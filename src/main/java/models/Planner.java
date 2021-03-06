@@ -1,43 +1,34 @@
 package models;
 
-
 import models.appointments.Appointment;
 
-import java.time.LocalTime;
 import java.util.List;
 
 public class Planner {
 
-    private List<String> allWorkdays;
     private String day;
-    private List<VeterinaryDoctor> doctors;
-    private LocalTime workdayStartTime;
+    private List<String> daysList;
+    private VeterinaryDoctor doctor;
+    private List<VeterinaryDoctor> veterinaryDoctorsList;
+    private TimeSlot timeSlot;
+    private List<TimeSlot> timeslotList;
     private Appointment appointment;
-    private LocalTime workdayEndTimeForFullTimeDoctors;
     private List<Appointment> appointmentList;
     private boolean available;
 
     public Planner() {
     }
 
-    public Planner( String day, List<VeterinaryDoctor> doctors, LocalTime workdayStartTime,
-                   LocalTime workdayEndTimeForFullTimeDoctors, Appointment appointment, boolean available) {
+    public Planner(String day, VeterinaryDoctor doctor,
+                   TimeSlot timeSlot, Appointment appointment, boolean available) {
 
         this.day = day;
-        this.doctors = doctors;
-        this.workdayStartTime = workdayStartTime;
-        this.workdayEndTimeForFullTimeDoctors = workdayEndTimeForFullTimeDoctors;
+        this.doctor = doctor;
+        this.timeSlot = timeSlot;
         this.appointment = appointment;
         this.available = available;
     }
 
-    public List<String> getAllWorkdays() {
-        return allWorkdays;
-    }
-
-    public void setAllWorkdays(List<String> allWorkdays) {
-        this.allWorkdays = allWorkdays;
-    }
 
     public String getDay() {
         return day;
@@ -47,20 +38,36 @@ public class Planner {
         this.day = day;
     }
 
-    public List<VeterinaryDoctor> getDoctors() {
-        return doctors;
+    public List<String> getDaysList() {
+        return daysList;
     }
 
-    public void setDoctors(List<VeterinaryDoctor> doctors) {
-        this.doctors = doctors;
+    public void setDaysList(List<String> daysList) {
+        this.daysList = daysList;
     }
 
-    public LocalTime getWorkdayStartTime() {
-        return workdayStartTime;
+    public VeterinaryDoctor getVeterinaryDoctor() {
+        return doctor;
     }
 
-    public void setWorkdayStartTime(LocalTime workdayStartTime) {
-        this.workdayStartTime = workdayStartTime;
+    public void setVeterinaryDoctor(VeterinaryDoctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public List<VeterinaryDoctor> getVeterinaryDoctorsList() {
+        return veterinaryDoctorsList;
+    }
+
+    public void setVeterinaryDoctorsList(List<VeterinaryDoctor> veterinaryDoctorsList) {
+        this.veterinaryDoctorsList = veterinaryDoctorsList;
+    }
+
+    public TimeSlot getTimeSlot() {
+        return timeSlot;
+    }
+
+    public void setTimeSlot(TimeSlot timeSlot) {
+        this.timeSlot = timeSlot;
     }
 
     public Appointment getAppointment() {
@@ -69,14 +76,6 @@ public class Planner {
 
     public void setAppointment(Appointment appointment) {
         this.appointment = appointment;
-    }
-
-    public LocalTime getWorkdayEndTimeForFullTimeDoctors() {
-        return workdayEndTimeForFullTimeDoctors;
-    }
-
-    public void setWorkdayEndTimeForFullTimeDoctors(LocalTime workdayEndTimeForFullTimeDoctors) {
-        this.workdayEndTimeForFullTimeDoctors = workdayEndTimeForFullTimeDoctors;
     }
 
     public List<Appointment> getAppointmentList() {
@@ -93,5 +92,13 @@ public class Planner {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    public List<TimeSlot> getTimeslotList() {
+        return timeslotList;
+    }
+
+    public void setTimeslotList(List<TimeSlot> timeslotList) {
+        this.timeslotList = timeslotList;
     }
 }
