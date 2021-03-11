@@ -1,25 +1,12 @@
 package generators;
 
-import enums.WorkWeekDayEnum;
-import generators.animalFactories.WildAnimalFactory;
-import models.Planner;
-import models.TimeSlot;
-
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class WorkWeekPlanner {
 
     private static final SecureRandom random = new SecureRandom();
-
-
-
-    public List<String> workDaysList = new ArrayList<>();
-    public WorkWeekDayEnum[] workWeekDayEnums = WorkWeekDayEnum.values();
-
 
 
 

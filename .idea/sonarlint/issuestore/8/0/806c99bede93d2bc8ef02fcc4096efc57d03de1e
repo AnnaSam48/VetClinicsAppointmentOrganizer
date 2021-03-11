@@ -1,5 +1,6 @@
 
-q
-java:S1128"TRemove this unnecessary import: same package classes are always implicitly imported.(³“©×8ŸÉ·ù.
-O
-java:S1128	"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8é¯İ¤ş.
+L
+java:S1068	"0Remove this unused "isWildAnimal" private field.(¾ïù8·¾Œí€/
+G
+java:S1068
+"*Remove this unused "animal" private field.(ãêİã8Ó«í€/

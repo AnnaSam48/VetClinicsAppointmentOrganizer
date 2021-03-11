@@ -1,12 +1,6 @@
 
-I
-java:S1128",Remove this unused import 'models.TimeSlot'.(¼Ëæğ8ºƒÉ¤ş.
 G
-java:S1068"*Remove this unused "random" private field.(Óğş¿8²â–ı.
-z
-java:S1104"XMake workDaysList a static final constant or non-public and provide accessors if needed.(ò¤äııÿÿÿÿ8Ï‡ĞÏ÷.
-y
-java:S1104"\Make workWeekDayEnums a static final constant or non-public and provide accessors if needed.(şè–Á8²­Ï÷.
-H
-java:S1128"+Remove this unused import 'models.Planner'.(ÅöœÃ8ÏÑû¥ş.
-]	java:S125"<This block of commented-out lines of code should be removed.(°—Ô‘ıÿÿÿÿ8Ãñäôş.
+java:S1068	"*Remove this unused "random" private field.(Óğş¿8²â–ı.
+]	java:S125"<This block of commented-out lines of code should be removed.(°—Ô‘ıÿÿÿÿ8Ãñäôş.
+\
+java:S1118":Add a private constructor to hide the implicit public one.(»ôÕÛûÿÿÿÿ8îÇ†æ€/

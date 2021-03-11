@@ -5,7 +5,7 @@ import generators.animalFactories.WildAnimalFactory;
 import models.TimeSlot;
 import models.animals.Animal;
 
-public class EmergencyAppointmentStrategy implements AppointmentStrategy {
+public class EmergencyAppointmentAnimalCreationStrategy implements AppointmentAnimalCreationStrategy {
 
     @Override
     public Animal getNewAppointmentAnimal(TimeSlot appointmentTime) {

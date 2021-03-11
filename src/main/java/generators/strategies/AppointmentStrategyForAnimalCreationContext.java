@@ -5,9 +5,9 @@ import models.animals.Animal;
 
 public class AppointmentStrategyForAnimalCreationContext {
 
-    private AppointmentStrategy strategy;
+    private AppointmentAnimalCreationStrategy strategy;
 
-    public AppointmentStrategyForAnimalCreationContext(AppointmentStrategy strategy){
+    public AppointmentStrategyForAnimalCreationContext(AppointmentAnimalCreationStrategy strategy){
         this.strategy = strategy;
     }
 
@@ -15,7 +15,7 @@ public class AppointmentStrategyForAnimalCreationContext {
         return strategy.getNewAppointmentAnimal(appointmentTime);
     }
 
-    public void setStrategy(AppointmentStrategy strategy)
+    public void setStrategy(AppointmentAnimalCreationStrategy strategy)
     {
         this.strategy = strategy;
     }

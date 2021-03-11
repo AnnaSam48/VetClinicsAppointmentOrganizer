@@ -2,11 +2,16 @@ package models.animals;
 
 abstract public class Animal {
 
-    protected String species;
-    protected boolean isWildAnimal;
+    private boolean isWildAnimal;
+    private String animal;
 
-    abstract String getAnimal();
+    public Animal(){}
 
-    abstract void isWildAnimal();
+    public boolean isWildAnimal() {
+        return isWildAnimal;
+    }
 
+    public String getAnimalSpeciesName() {
+        return animal;
+    }
 }

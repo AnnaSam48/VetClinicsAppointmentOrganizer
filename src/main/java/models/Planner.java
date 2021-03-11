@@ -7,7 +7,6 @@ import java.util.List;
 public class Planner {
 
     private String day;
-    private List<String> daysList;
     private VeterinaryDoctor doctor;
     private List<VeterinaryDoctor> veterinaryDoctorsList;
     private TimeSlot timeSlot;
@@ -29,22 +28,6 @@ public class Planner {
         this.available = available;
     }
 
-
-    public String getDay() {
-        return day;
-    }
-
-    public void setDay(String day) {
-        this.day = day;
-    }
-
-    public List<String> getDaysList() {
-        return daysList;
-    }
-
-    public void setDaysList(List<String> daysList) {
-        this.daysList = daysList;
-    }
 
     public VeterinaryDoctor getVeterinaryDoctor() {
         return doctor;

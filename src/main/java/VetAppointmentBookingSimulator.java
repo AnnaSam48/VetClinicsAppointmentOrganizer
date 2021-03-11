@@ -4,8 +4,8 @@ public class VetAppointmentBookingSimulator {
 
     public static void main(String[] args) {
         VetAppointmentOrganizerFacade facade = new VetAppointmentOrganizerFacade();
-        facade.printEmptyPlanner();
-
+      //  facade.printEmptyPlanner();
+        facade.bookAppointments();
     }
 
 }

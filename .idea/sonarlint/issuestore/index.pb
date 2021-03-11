@@ -7,8 +7,6 @@ g
 7src/main/java/facade/VetAppointmentOrganizerFacade.java,6\0\6076951007a2d7648f5881482a52bcd072f275ef
 Q
 !src/main/java/models/Planner.java,3\6\36f6c8d9ac43bfc22134e52191ea1d12dd08db62
-X
-(src/main/java/enums/WorkWeekDayEnum.java,0\7\075744c3d16a2ffa7d73735dc2ba05b11909cb5e
 ]
 -src/main/java/generators/WorkWeekPlanner.java,7\f\7fdaeee873b9d19e40ec39701504efa59a4fe312
 ]
@@ -35,16 +33,10 @@ k
 ;src/main/java/models/appointments/PrebookedAppointment.java,7\2\7243646bb9cb431e3f409cbbcde00990136dedf3
 b
 2src/main/java/models/appointments/Appointment.java,9\7\978120b761863a6eb063ee7d32441cf1a0c9334b
-l
-<src/main/java/generators/strategies/AppointmentStrategy.java,a\b\ab2d6566ef2b4c7f6cbfdfd8288b784a764c7494
 t
 Dsrc/main/java/generators/strategies/EmergencyAppointmentCreator.java,e\0\e0e8af944a6355c9b1850b5c0ea6e1d8f672eb8c
 R
 "src/main/java/models/TimeSlot.java,f\e\fe6c028421a1e6e59a0a0ae80792ae1962e112e1
-x
-Hsrc/main/java/generators/strategies/NonEmergencyAppointmentStrategy.java,9\d\9d07c8fb686bb817cdf919659b9f5e4eacf7fe32
-u
-Esrc/main/java/generators/strategies/EmergencyAppointmentStrategy.java,c\5\c5350ae8ccc3b19f924887a21e4c35bb9e6cdbcc
 „
 Tsrc/main/java/generators/strategies/AppointmentStrategyForAnimalCreationContext.java,7\f\7f7a552d2dfbe35cf5820479d3a25300d6e1837e
 s
@@ -55,3 +47,9 @@ Lsrc/main/java/generators/appointmentFactory/EmergencyAppointmentFactory.java,3
 Osrc/main/java/generators/appointmentFactory/NonEmergencyAppointmentFactory.java,0\3\03611f39edeb7068d695e521dc46113ca65c7b31
 \
 ,src/main/java/enums/AppointmentTypeEnum.java,6\d\6d94419b1c642c8158e572dceed93ad2586b14f1
+ƒ
+Ssrc/main/java/generators/strategies/EmergencyAppointmentAnimalCreationStrategy.java,9\e\9ece19a0ed3f9feb4d0fb862f52c74429b7f4619
+z
+Jsrc/main/java/generators/strategies/AppointmentAnimalCreationStrategy.java,2\7\2765c9512991c2f377925b880364ee2a5c2c5cfd
+†
+Vsrc/main/java/generators/strategies/NonEmergencyAppointmentAnimalCreationStrategy.java,3\3\336c8fc370870f9cb99b47aeb7815d2238878b93

@@ -1,6 +1,4 @@
 
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦‘¶–
 g
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(þÇÖ£øÿÿÿÿ8î‹Æœþ.
-d
-java:S1610"BConvert the abstract class "AppointmentFactory" into an interface.(þÇÖ£øÿÿÿÿ8î‹Æœþ.
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(þÇÖ£øÿÿÿÿ8î‹Æœþ.

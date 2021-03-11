@@ -4,16 +4,37 @@ import models.TimeSlot;
 import models.VeterinaryDoctor;
 import models.animals.Animal;
 
+
+
 public abstract class Appointment {
 
-    protected String appointmentType;
-    protected TimeSlot appointmentTimeslot;
-    protected boolean isAvailable;
+    private String appointmentType;
+    private TimeSlot appointmentTimeSlot;
+    private VeterinaryDoctor veterinaryDoctor;
+    private Animal animal;
 
-    abstract String getAppointmentType();
-    abstract TimeSlot setAppointmentTimeslot(TimeSlot appointmentTimeslot);
-    abstract Animal setAnimalForAppointment(Animal animalForAppointment);
-    abstract VeterinaryDoctor setDoctorForAppointment(VeterinaryDoctor doctor);
+    public Appointment (String appointmentType, TimeSlot appointmentTimeSlot,
+                        VeterinaryDoctor veterinaryDoctor, Animal animal){
+        this.appointmentType = appointmentType;
+        this.appointmentTimeSlot = appointmentTimeSlot;
+        this.veterinaryDoctor = veterinaryDoctor;
+        this.animal = animal;
+    }
 
+    public String getAppointmentType(){
+        return appointmentType;
+    }
+
+    public TimeSlot getAppointmentTimeSlot(){
+        return  appointmentTimeSlot;
+    }
+
+    public VeterinaryDoctor getVeterinaryDoctor(){
+        return veterinaryDoctor;
+    }
+
+    public Animal getAnimal(){
+        return animal;
+    }
 
 }
