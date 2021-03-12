@@ -1,0 +1,8 @@
+
+N
+java:S1128"1Remove this unused import 'java.util.Comparator'.(î¹ó¹8Ð‰ï®‚/
+I
+java:S1128",Remove this unused import 'models.TimeSlot'.(¼Ëæð8Ð‰ï®‚/
+W
+java:S1068
+":Remove this unused "bookedAppointmentsList" private field.(›¼þ°8ƒØï®‚/

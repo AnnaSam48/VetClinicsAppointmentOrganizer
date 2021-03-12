@@ -1,22 +1,7 @@
 
-T
-java:S1135#"2Complete the task associated to this TODO comment.(ÊüÑÖüÿÿÿÿ8â®üú.
-]
-java:S1126o"AReplace this if-then-else statement by a single return statement.(òøùK8ûÎè/
-[	java:S106¹"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ûÎè/
-Z
-java:S1155o">Use isEmpty() to check whether the collection is empty or not.(òøùK8ûÎè/
-[	java:S106Â"9Replace this use of System.out or System.err by a logger.(ÿê°äüÿÿÿÿ8ûÎè/
-[	java:S106Å"9Replace this use of System.out or System.err by a logger.(¶¯›Ôÿÿÿÿÿ8ûÎè/
-[	java:S106Æ"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8¶“€ûş.
-V	java:S106º"9Replace this use of System.out or System.err by a logger.(å¼ñ”8ÓÈ­úş.
-Å
-java:S1192¼"¦Define a constant instead of duplicating this literal "=====================================================================================================" 6 times.(ˆê½8£°“æ€/
-U	java:S106P"9Replace this use of System.out or System.err by a logger.(‘¹Ó8ûÎè/
-c
-java:S1126T"AReplace this if-then-else statement by a single return statement.(¸•»€øÿÿÿÿ8ûÎè/
-O
-java:S1602¶",Remove useless curly braces around statement(Š°şÿÿÿÿ8ûÎè/
-V	java:S106·"9Replace this use of System.out or System.err by a logger.(«”íë8ûÎè/
-Z	java:S106D"9Replace this use of System.out or System.err by a logger.(ÒŸñÍúÿÿÿÿ8ûÎè/
-V	java:S106Ç"9Replace this use of System.out or System.err by a logger.(å¼ñ”8ó‰„ùş.
+U	java:S106k"9Replace this use of System.out or System.err by a logger.(şÛâ8»Ñé®‚/
+[
+java:S4973"9Use the "equals" method if value comparison was intended.(‘«õ¥ûÿÿÿÿ8ä«Ó®‚/
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(şÛâ8Üã®‚/
+Z	java:S106\"9Replace this use of System.out or System.err by a logger.(©Ñ“Üıÿÿÿÿ8ä«Ó®‚/
+U	java:S106j"9Replace this use of System.out or System.err by a logger.(íÍ°ƒ8ä«Ó®‚/

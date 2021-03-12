@@ -1,13 +1,17 @@
 package facade;
 
+import decorators_bridge.*;
 import enums.AppointmentTypeEnum;
 import enums.RandomEnumLogicClass;
-import generators.appointmentFactory.AppointmentFactory;
-import generators.appointmentFactory.EmergencyAppointmentFactory;
-import generators.appointmentFactory.NonEmergencyAppointmentFactory;
-import generators.strategies.AppointmentStrategyForAnimalCreationContext;
-import generators.strategies.EmergencyAppointmentAnimalCreationStrategy;
-import generators.strategies.NonEmergencyAppointmentAnimalCreationStrategy;
+import factories.appointmentFactory.AppointmentFactory;
+import factories.appointmentFactory.EmergencyAppointmentFactory;
+import factories.appointmentFactory.NonEmergencyAppointmentFactory;
+import state.PlannerStateContext;
+import state.StartPlanningDay;
+import state.StopPlanningDay;
+import strategies.AppointmentStrategyForAnimalCreationContext;
+import strategies.EmergencyAppointmentAnimalCreationStrategy;
+import strategies.NonEmergencyAppointmentAnimalCreationStrategy;
 import models.Planner;
 import models.TimeSlot;
 import models.VeterinaryDoctor;
@@ -15,10 +19,7 @@ import models.animals.Animal;
 import models.appointments.Appointment;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class VetAppointmentOrganizerFacade {
@@ -32,20 +33,16 @@ public class VetAppointmentOrganizerFacade {
             new AppointmentStrategyForAnimalCreationContext(new NonEmergencyAppointmentAnimalCreationStrategy());
     List<Appointment> bookedAppointmentList = new ArrayList<>();
     Planner newDayPlanner = new Planner();
+    PlannerStateContext context = new PlannerStateContext();
 
-    /*TODO: appointment logic:
-
-    1)Check if planner is full
-    2)Check if timeslot is full && check if doctor is available
-    3)observer to notify when planner is full, when timeslot is full
-        ?if timeslot is full take it out of timeslot list?
-    4) decorator pattern for treatments?
-
-
-*/
     public void bookAppointments() {
         Planner newPlanner = getDayPlanner();
-        while(!isPlannerFull(newPlanner)) {
+        while (!isPlannerFull(newPlanner)) {
+            //State for purposes of having facade only prints the state, but normally would contain logic
+            StartPlanningDay startState = new StartPlanningDay();
+            startState.doAction(context);
+            System.out.println(context.getState().toString());
+
             String appointmentType = getRandomAppointmentType();
             TimeSlot appointmentTime = getRandomTimeslot(newPlanner.getTimeslotList());
 
@@ -70,20 +67,26 @@ public class VetAppointmentOrganizerFacade {
                         || appointmentTime.getSlotNumber() == 2
                         || appointmentTime.getSlotNumber() == 3
                         || appointmentTime.getSlotNumber() == 4) {
-                    //set wild animals for emergency appointments
+                    //set wild animals for emergency appointments with strategy that calls WildAnimalFactory
                     Animal newGeneratedAnimal = strategyContextForEmergencyAppointmentAnimals.animalAccordingToStrategy(appointmentTime);
                     Appointment newAppointment = newEmergencyAppointmentFactory.createAppointment(appointmentType, appointmentTime, veterinaryDoc, newGeneratedAnimal);
+                    //Appointment urgency decorators
+                    AppointmentUrgency appointmentUrgency = new AppointmentUrgency();
+                    AppointmentUrgencyLevel urgentAppointment = new UrgentAppointmentUrgencyDecorator(appointmentUrgency);
+                    urgentAppointment.addAppointmentUrgencyLevel();
                     bookedAppointmentList.add(newAppointment);
                     newPlanner.setAppointment(newAppointment);
                     newPlanner.setTimeSlot(appointmentTime);
-                    System.out.println(newAppointment);
                 } else {
-                    //set domestic animals for appointment
+                    //set domestic animals for appointment with strategy that calls DomesticAnimalFactory
                     Animal newGeneratedAnimal = strategyContextForNormalAppointmentAnimals.animalAccordingToStrategy(appointmentTime);
                     Appointment newAppointment = newNonEmergencyAppointmentFactory.createAppointment(appointmentType, appointmentTime, veterinaryDoc, newGeneratedAnimal);
+                    //Appointment urgency decorators
+                    AppointmentUrgency appointmentUrgency = new AppointmentUrgency();
+                    AppointmentUrgencyLevel routineAppointment = new RoutineAppointmentUrgencyDecorator(appointmentUrgency);
+                    routineAppointment.addAppointmentUrgencyLevel();
                     bookedAppointmentList.add(newAppointment);
                     newPlanner.setAppointment(newAppointment);
-                    System.out.println(newAppointment);
                 }
             } else {
                 System.out.println("Timeslot not available");
@@ -92,7 +95,16 @@ public class VetAppointmentOrganizerFacade {
             newPlanner.setAppointmentList(bookedAppointmentList);
         }
 
-        bookedAppointmentList.forEach(appointment -> System.out.println(appointment.getAppointmentTimeSlot().getSlotName() + "||" +appointment.getVeterinaryDoctor().getNameSurname() + "||" + appointment.getAppointmentType() + "||" + appointment.getAnimal()));
+        StopPlanningDay stopPlanning = new StopPlanningDay();
+        stopPlanning.doAction(context);
+
+        bookedAppointmentList.stream()
+                .sorted(Comparator.comparing(appointment -> {
+                    TimeSlot timeslot = appointment.getAppointmentTimeSlot();
+                    return timeslot.getSlotNumber();
+                }))
+                .forEach(appointment -> System.out.println(appointment.getAppointmentTimeSlot().getSlotName() + "||" + appointment.getVeterinaryDoctor().getNameSurname() + "||" + appointment.getAppointmentType() + "||" + appointment.getAnimal()));
+        System.out.println(context.getState().toString());
     }
 
 
@@ -110,24 +122,16 @@ public class VetAppointmentOrganizerFacade {
 
     private boolean isTimeslotAvailable(Planner planner, TimeSlot timeslotToCheck) {
 
-            List<TimeSlot> availableTimeslots = planner.getTimeslotList().stream()
-                    .filter(timeSlot -> timeSlot.getSlotNumber() == timeslotToCheck.getSlotNumber()
-                            && timeSlot.getDoctorsName() == timeslotToCheck.getDoctorsName()
-                            && timeSlot.getIsAvailable())
-                    .collect(Collectors.toList());
-            if (availableTimeslots.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+        List<TimeSlot> availableTimeslots = planner.getTimeslotList().stream()
+                .filter(timeSlot -> timeSlot.getSlotNumber() == timeslotToCheck.getSlotNumber()
+                        && timeSlot.getDoctorsName() == timeslotToCheck.getDoctorsName()
+                        && timeSlot.getIsAvailable())
+                .collect(Collectors.toList());
+        return !availableTimeslots.isEmpty();
     }
 
-    public boolean isPlannerFull(Planner planner){
-        if(planner.getAppointmentList() == null || planner.getAppointmentList().size() < 27){
-            return false;
-        } else {
-            return true;
-        }
+    public boolean isPlannerFull(Planner planner) {
+        return planner.getAppointmentList() != null && planner.getAppointmentList().size() >= 27;
     }
 
     protected List<VeterinaryDoctor> getAllDoctors() {
@@ -139,7 +143,7 @@ public class VetAppointmentOrganizerFacade {
 
     protected List<TimeSlot> getAllAppointmentTimeSlotList() {
         List<TimeSlot> timeSlotList = new ArrayList<>();
-        for(VeterinaryDoctor doctor : getAllDoctors()) {
+        for (VeterinaryDoctor doctor : getAllDoctors()) {
             for (int i = 0; i < 9; i++) {
                 TimeSlot timeSlot = new TimeSlot();
                 timeSlot.setSlotNumber(i + 1);
@@ -158,65 +162,10 @@ public class VetAppointmentOrganizerFacade {
         return timeSlotList.get(randomTimeslotIndex);
     }
 
-    protected List<VeterinaryDoctor> getAvailableDoctorsForTimeSlot(Planner appointmentPlanner, TimeSlot appointmentTimeslot) {
-        if (appointmentPlanner.getAppointmentList() == null) {
-            return getAllDoctors();
-        } else {
-            List<String> busyDoctorsList = appointmentPlanner
-                    .getTimeslotList()
-                    .stream()
-                    .filter(timeSlot ->
-                            timeSlot.getSlotNumber() == appointmentTimeslot.getSlotNumber()
-                                    && !timeSlot.getIsAvailable())
-                    .collect(Collectors.toList())
-                    .stream()
-                    .map(TimeSlot::getDoctorsName).collect(Collectors.toList());
-
-            List<String> availableDoctorsNameList = getAllDoctors().stream()
-                    .map(VeterinaryDoctor::getNameSurname)
-                    .filter(doctor -> !busyDoctorsList.contains(doctor))
-                    .collect(Collectors.toList());
-
-            return getAllDoctors().stream().filter(vet -> availableDoctorsNameList
-                    .contains(vet.getNameSurname())).collect(Collectors.toList());
-        }
-    }
-
     String getRandomAppointmentType() {
         AppointmentTypeEnum appointmentType = RandomEnumLogicClass.
                 randomEnum(AppointmentTypeEnum.class);
         return appointmentType.name();
-    }
-
-
-    public void printEmptyPlanner() {
-
-        getDayPlanner().getVeterinaryDoctorsList()
-                .forEach(doctor -> {
-                    System.out.print("             " + doctor.getNameSurname() + "    || ");
-                });
-        System.out.println();
-        System.out.println("================================================================="
-                + "======================================================================================================"
-                + "====================================================================================================="
-                + "====================================================================================================="
-                + "=====================================================================================================");
-        getDayPlanner().getVeterinaryDoctorsList()
-                .forEach(doctor -> getDayPlanner().getTimeslotList()
-                        .forEach(timeSlot -> {
-                            System.out.print(timeSlot.getSlotName() + " || ");
-                            getDayPlanner()
-                                    .getVeterinaryDoctorsList()
-                                    .forEach(doctor1 -> System.out.print(" " + timeSlot.getIsAvailable() + " || "));
-                            System.out.println();
-                            System.out.println("================================================================="
-                                    + "======================================================================================================"
-                                    + "====================================================================================================="
-                                    + "====================================================================================================="
-                                    + "=====================================================================================================");
-
-                        }));
-
     }
 }
 
