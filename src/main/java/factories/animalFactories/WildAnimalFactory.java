@@ -3,7 +3,7 @@ package factories.animalFactories;
 import models.animals.WildAnimal;
 
 
-public class WildAnimalFactory extends AnimalFactory {
+public class WildAnimalFactory implements AnimalFactory {
 
 
     @Override

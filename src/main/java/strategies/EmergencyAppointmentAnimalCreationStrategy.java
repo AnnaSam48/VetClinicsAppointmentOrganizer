@@ -12,7 +12,7 @@ import java.util.List;
 
 public class EmergencyAppointmentAnimalCreationStrategy implements AppointmentAnimalCreationStrategy {
 
-    private SecureRandom wildAnimalRandom = new SecureRandom();
+    private final SecureRandom wildAnimalRandom = new SecureRandom();
     List<String> wildAnimals =new ArrayList<>(Arrays.asList("Fox", "Badger", "Peregrine", "Lynx", "Rabbit", "Boar", "Bear", "Neighbourhood Hooligan"));
 
     @Override

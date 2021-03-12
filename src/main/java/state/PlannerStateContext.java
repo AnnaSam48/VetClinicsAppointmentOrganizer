@@ -1,9 +1,10 @@
 package state;
 
 public class PlannerStateContext {
+
     private PlannerState state;
 
-   public PlannerStateContext(){
+    public PlannerStateContext() {
         state = null;
     }
 

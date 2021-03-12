@@ -1,4 +1,4 @@
-package decorators_bridge;
+package decoratorsOrBridge;
 
 public class UrgentAppointmentUrgencyDecorator extends AppointmentUrgencyDecorator {
 

@@ -7,6 +7,6 @@ public enum AppointmentTypeEnum {
     TREATMENT,
     VACCINE,
     HOUSE_CALL,
-    SURGERY;
+    SURGERY
 
 }

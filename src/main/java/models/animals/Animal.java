@@ -1,16 +1,20 @@
 package models.animals;
 
-abstract public class Animal {
+public abstract class Animal {
 
-    private boolean isWildAnimal;
-    private String animal;
+    private final boolean isWildAnimal;
+    private final String animalSpecies;
 
-    public Animal(boolean isWildAnimal, String animal){
+    protected Animal(boolean isWildAnimal, String animalSpecies) {
         this.isWildAnimal = isWildAnimal;
-        this.animal = animal;
+        this.animalSpecies = animalSpecies;
     }
 
-    public String getAnimal() {
-        return animal;
+    public String getAnimalSpecies() {
+        return animalSpecies;
+    }
+
+    public boolean isWild() {
+        return isWildAnimal;
     }
 }

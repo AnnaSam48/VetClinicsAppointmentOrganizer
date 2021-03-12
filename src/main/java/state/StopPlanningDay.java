@@ -8,6 +8,6 @@ public class StopPlanningDay implements PlannerState{
     }
 
     public String toString(){
-        return "Planning stopped.";
+        return "Booking of appointments stopped. Planner for the day is full";
     }
 }

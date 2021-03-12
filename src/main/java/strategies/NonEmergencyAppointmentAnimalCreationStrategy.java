@@ -2,7 +2,6 @@ package strategies;
 
 import factories.animalFactories.AnimalFactory;
 import factories.animalFactories.DomesticAnimalFactory;
-import factories.animalFactories.WildAnimalFactory;
 import models.TimeSlot;
 import models.animals.Animal;
 
@@ -13,7 +12,7 @@ import java.util.List;
 
 public class NonEmergencyAppointmentAnimalCreationStrategy implements AppointmentAnimalCreationStrategy {
 
-    private SecureRandom domesticAnimalRandom = new SecureRandom();
+    private final SecureRandom domesticAnimalRandom = new SecureRandom();
     List<String> domesticAnimals =new ArrayList<>(Arrays.asList("Cat", "Dog", "Parrot", "Hamster", "Horse", "Cow"));
 
     @Override

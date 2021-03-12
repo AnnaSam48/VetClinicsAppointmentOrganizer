@@ -1,10 +1,12 @@
-package decorators_bridge;
+package decoratorsOrBridge;
 
 public class RoutineAppointmentUrgencyDecorator extends AppointmentUrgencyDecorator {
 
     public RoutineAppointmentUrgencyDecorator(AppointmentUrgency decoratedAppointment) {
+
         super(decoratedAppointment);
     }
+
     @Override
     public void addAppointmentUrgencyLevel() {
         decoratedAppointment.addAppointmentUrgencyLevel();
