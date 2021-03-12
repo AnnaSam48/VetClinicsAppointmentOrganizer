@@ -1,31 +1,29 @@
 package models;
 
+import models.animals.Animal;
 import models.appointments.Appointment;
 
 import java.util.List;
 
 public class Planner {
 
-    private String day;
     private VeterinaryDoctor doctor;
     private List<VeterinaryDoctor> veterinaryDoctorsList;
     private TimeSlot timeSlot;
     private List<TimeSlot> timeslotList;
     private Appointment appointment;
     private List<Appointment> appointmentList;
-    private boolean available;
+
 
     public Planner() {
     }
 
-    public Planner(String day, VeterinaryDoctor doctor,
-                   TimeSlot timeSlot, Appointment appointment, boolean available) {
+    public Planner(VeterinaryDoctor doctor,
+                   TimeSlot timeSlot, Appointment appointment) {
 
-        this.day = day;
         this.doctor = doctor;
         this.timeSlot = timeSlot;
         this.appointment = appointment;
-        this.available = available;
     }
 
 
@@ -69,14 +67,6 @@ public class Planner {
         this.appointmentList = appointmentList;
     }
 
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
-
     public List<TimeSlot> getTimeslotList() {
         return timeslotList;
     }
@@ -84,4 +74,5 @@ public class Planner {
     public void setTimeslotList(List<TimeSlot> timeslotList) {
         this.timeslotList = timeslotList;
     }
+
 }

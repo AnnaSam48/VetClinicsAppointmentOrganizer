@@ -9,12 +9,4 @@ abstract public class Animal {
         this.isWildAnimal = isWildAnimal;
         this.animal = animal;
     }
-
-    public boolean isWildAnimal() {
-        return isWildAnimal;
-    }
-
-    public String getAnimalSpeciesName() {
-        return animal;
-    }
 }

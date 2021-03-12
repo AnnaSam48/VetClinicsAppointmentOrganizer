@@ -25,11 +25,11 @@ import java.util.stream.Collectors;
 public class VetAppointmentOrganizerFacade {
 
     private SecureRandom random = new SecureRandom();
-    private AppointmentFactory newEmergencyAppointmentFactory = new EmergencyAppointmentFactory();
-    private AppointmentFactory newNonEmergencyAppointmentFactory = new NonEmergencyAppointmentFactory();
-    private AppointmentStrategyForAnimalCreationContext strategyContextForEmergencyAppointmentAnimals =
+    private final AppointmentFactory newEmergencyAppointmentFactory = new EmergencyAppointmentFactory();
+    private final  AppointmentFactory newNonEmergencyAppointmentFactory = new NonEmergencyAppointmentFactory();
+    private final AppointmentStrategyForAnimalCreationContext strategyContextForEmergencyAppointmentAnimals =
             new AppointmentStrategyForAnimalCreationContext(new EmergencyAppointmentAnimalCreationStrategy());
-    private AppointmentStrategyForAnimalCreationContext strategyContextForNormalAppointmentAnimals =
+    private final AppointmentStrategyForAnimalCreationContext strategyContextForNormalAppointmentAnimals =
             new AppointmentStrategyForAnimalCreationContext(new NonEmergencyAppointmentAnimalCreationStrategy());
     List<Appointment> bookedAppointmentList = new ArrayList<>();
     Planner newDayPlanner = new Planner();
@@ -69,7 +69,8 @@ public class VetAppointmentOrganizerFacade {
                         || appointmentTime.getSlotNumber() == 4) {
                     //set wild animals for emergency appointments with strategy that calls WildAnimalFactory
                     Animal newGeneratedAnimal = strategyContextForEmergencyAppointmentAnimals.animalAccordingToStrategy(appointmentTime);
-                    Appointment newAppointment = newEmergencyAppointmentFactory.createAppointment(appointmentType, appointmentTime, veterinaryDoc, newGeneratedAnimal);
+                    appointmentTime.setAnimal(newGeneratedAnimal);
+                    Appointment newAppointment = newEmergencyAppointmentFactory.createAppointment(appointmentType, appointmentTime, veterinaryDoc, appointmentTime.getAnimal());
                     //Appointment urgency decorators
                     AppointmentUrgency appointmentUrgency = new AppointmentUrgency();
                     AppointmentUrgencyLevel urgentAppointment = new UrgentAppointmentUrgencyDecorator(appointmentUrgency);
@@ -80,7 +81,8 @@ public class VetAppointmentOrganizerFacade {
                 } else {
                     //set domestic animals for appointment with strategy that calls DomesticAnimalFactory
                     Animal newGeneratedAnimal = strategyContextForNormalAppointmentAnimals.animalAccordingToStrategy(appointmentTime);
-                    Appointment newAppointment = newNonEmergencyAppointmentFactory.createAppointment(appointmentType, appointmentTime, veterinaryDoc, newGeneratedAnimal);
+                    appointmentTime.setAnimal(newGeneratedAnimal);
+                    Appointment newAppointment = newNonEmergencyAppointmentFactory.createAppointment(appointmentType, appointmentTime, veterinaryDoc, appointmentTime.getAnimal());
                     //Appointment urgency decorators
                     AppointmentUrgency appointmentUrgency = new AppointmentUrgency();
                     AppointmentUrgencyLevel routineAppointment = new RoutineAppointmentUrgencyDecorator(appointmentUrgency);

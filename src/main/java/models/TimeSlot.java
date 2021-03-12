@@ -1,11 +1,14 @@
 package models;
 
+import models.animals.Animal;
+
 public class TimeSlot {
 
     private int slotNumber;
     private String slotName;
     private boolean isAvailable;
     private String doctorsName;
+    private Animal animal;
 
     public TimeSlot() {
     }
@@ -46,5 +49,13 @@ public class TimeSlot {
 
     public void setDoctorsName(String doctorsName) {
         this.doctorsName = doctorsName;
+    }
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
     }
 }
