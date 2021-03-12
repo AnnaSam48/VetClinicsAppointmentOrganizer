@@ -1,9 +1,7 @@
 
+L
+java:S1068"*Remove this unused "animal" private field.(¡§Ëùÿÿÿÿ8Ğˆ´í€/
 O
 java:S1128"-Remove this unused import 'java.util.Random'.(èøÉ›ùÿÿÿÿ8±¶Ù¤ş.
 R
 java:S1068"0Remove this unused "isWildAnimal" private field.(—×’ªıÿÿÿÿ8Â³í€/
-T
-java:S2387"2"isWildAnimal" is the name of a field in "Animal".(—×’ªıÿÿÿÿ8Â³í€/
-L
-java:S1068"*Remove this unused "animal" private field.(¡§Ëùÿÿÿÿ8Ğˆ´í€/

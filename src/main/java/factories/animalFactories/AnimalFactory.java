@@ -7,5 +7,5 @@ abstract public class AnimalFactory {
     boolean isWild;
     String animal;
 
-    public abstract Animal createAnimal();
+    public abstract Animal createAnimal(boolean isWild, String animal);
 }

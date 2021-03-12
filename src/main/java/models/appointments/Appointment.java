@@ -18,7 +18,6 @@ public abstract class Appointment {
         this.appointmentType = appointmentType;
         this.appointmentTimeSlot = appointmentTimeSlot;
         this.veterinaryDoctor = veterinaryDoctor;
-        this.animal = animal;
     }
 
     public String getAppointmentType(){
@@ -33,8 +32,12 @@ public abstract class Appointment {
         return veterinaryDoctor;
     }
 
-    public Animal getAnimal(){
+    public Animal getAnimal() {
         return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
     }
 
 }

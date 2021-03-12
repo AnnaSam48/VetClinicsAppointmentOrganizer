@@ -103,7 +103,7 @@ public class VetAppointmentOrganizerFacade {
                     TimeSlot timeslot = appointment.getAppointmentTimeSlot();
                     return timeslot.getSlotNumber();
                 }))
-                .forEach(appointment -> System.out.println(appointment.getAppointmentTimeSlot().getSlotName() + "||" + appointment.getVeterinaryDoctor().getNameSurname() + "||" + appointment.getAppointmentType() + "||" + appointment.getAnimal()));
+                .forEach(appointment -> System.out.println(appointment.getAppointmentTimeSlot().getSlotName() + "||" + appointment.getVeterinaryDoctor().getNameSurname() + "||" + appointment.getAppointmentType() + "||" + appointment.getAnimal().getAnimalSpeciesName()));
         System.out.println(context.getState().toString());
     }
 

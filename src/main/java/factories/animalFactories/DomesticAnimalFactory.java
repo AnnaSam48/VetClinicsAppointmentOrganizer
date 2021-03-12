@@ -6,7 +6,9 @@ import models.animals.DomesticAnimal;
 public class DomesticAnimalFactory extends AnimalFactory {
 
     @Override
-    public DomesticAnimal createAnimal() {
-        return new DomesticAnimal();
+    public DomesticAnimal createAnimal(boolean isWild, String animal) {
+        return new DomesticAnimal(isWild,animal);
     }
+
+
 }

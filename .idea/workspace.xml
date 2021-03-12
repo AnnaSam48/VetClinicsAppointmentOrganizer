@@ -5,58 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8127c141-12df-4a1f-8fb0-ddf9e995b7ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ObjectOrientatedDesignPattern.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f7a552d2dfbe35cf5820479d3a25300d6e1837e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe6c028421a1e6e59a0a0ae80792ae1962e112e1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/decorators_bridge/AppointmentUrgency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/decorators_bridge/AppointmentUrgencyDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/decorators_bridge/AppointmentUrgencyLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/decorators_bridge/RoutineAppointmentUrgencyDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/decorators_bridge/UrgentAppointmentUrgencyDecorator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/PlannerState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/PlannerStateContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/StartPlanningDay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/state/StopPlanningDay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d0ec203d84427e9c1453ae810772cb6a02095f7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/d/0d0ec203d84427e9c1453ae810772cb6a02095f7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c517ae8b7d805b52e7f14df4bad66343b022ad4" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c517ae8b7d805b52e7f14df4bad66343b022ad4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/6076951007a2d7648f5881482a52bcd072f275ef" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/6076951007a2d7648f5881482a52bcd072f275ef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69a9c1f8b94a841a84178c85bf2c680d0c1eaf82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69a9c1f8b94a841a84178c85bf2c680d0c1eaf82" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7802dfe16c9be470e248b4bd97378b8c03842e94" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/7802dfe16c9be470e248b4bd97378b8c03842e94" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/806c99bede93d2bc8ef02fcc4096efc57d03de1e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/806c99bede93d2bc8ef02fcc4096efc57d03de1e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/978120b761863a6eb063ee7d32441cf1a0c9334b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/978120b761863a6eb063ee7d32441cf1a0c9334b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe80cd1bcf88ac6a4db49d5314d2dc4c0dfe782b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fe80cd1bcf88ac6a4db49d5314d2dc4c0dfe782b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VetAppointmentBookingSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/VetAppointmentBookingSimulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/facade/VetAppointmentOrganizerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/facade/VetAppointmentOrganizerFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/WorkWeekPlanner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/animalFactories/AnimalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/animalFactories/AnimalFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/animalFactories/DomesticAnimalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/animalFactories/DomesticAnimalFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/animalFactories/WildAnimalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/animalFactories/WildAnimalFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/appointmentFactory/AppointmentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/appointmentFactory/AppointmentFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/appointmentFactory/EmergencyAppointmentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/appointmentFactory/EmergencyAppointmentFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/appointmentFactory/NonEmergencyAppointmentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/appointmentFactory/NonEmergencyAppointmentFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/strategies/AppointmentAnimalCreationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategies/AppointmentAnimalCreationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/strategies/AppointmentStrategyForAnimalCreationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategies/AppointmentStrategyForAnimalCreationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/strategies/EmergencyAppointmentAnimalCreationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategies/EmergencyAppointmentAnimalCreationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/strategies/EmergencyAppointmentCreator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generators/strategies/NonEmergencyAppointmentAnimalCreationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategies/NonEmergencyAppointmentAnimalCreationStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/observers/BookingAvailabilityObserver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/facade/VetAppointmentOrganizerFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/facade/VetAppointmentOrganizerFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/WorkWeekPlanner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/animalFactories/AnimalFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/animalFactories/DomesticAnimalFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/animalFactories/WildAnimalFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/appointmentFactory/AppointmentFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/appointmentFactory/EmergencyAppointmentFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/appointmentFactory/NonEmergencyAppointmentFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/strategies/AppointmentAnimalCreationStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/strategies/AppointmentStrategyForAnimalCreationContext.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/strategies/EmergencyAppointmentAnimalCreationStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generators/strategies/NonEmergencyAppointmentAnimalCreationStrategy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/observers/BookingAvailabilityObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/animalFactories/AnimalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/animalFactories/AnimalFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/animalFactories/DomesticAnimalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/animalFactories/DomesticAnimalFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/factories/animalFactories/WildAnimalFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/factories/animalFactories/WildAnimalFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/animals/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/animals/DomesticAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/animals/DomesticAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/animals/WildAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/animals/WildAnimal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/appointments/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/appointments/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/state/StartPlanningDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/state/StartPlanningDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategies/EmergencyAppointmentAnimalCreationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategies/EmergencyAppointmentAnimalCreationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strategies/NonEmergencyAppointmentAnimalCreationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strategies/NonEmergencyAppointmentAnimalCreationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/VetAppointmentBookingSimulator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decorators_bridge/AppointmentUrgency.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decorators_bridge/AppointmentUrgencyDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decorators_bridge/AppointmentUrgencyLevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decorators_bridge/RoutineAppointmentUrgencyDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/decorators_bridge/UrgentAppointmentUrgencyDecorator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/AppointmentTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/enums/RandomEnumLogicClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/facade/VetAppointmentOrganizerFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factories/animalFactories/AnimalFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factories/animalFactories/DomesticAnimalFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factories/animalFactories/WildAnimalFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factories/appointmentFactory/AppointmentFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factories/appointmentFactory/EmergencyAppointmentFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/factories/appointmentFactory/NonEmergencyAppointmentFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Planner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/TimeSlot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/VeterinaryDoctor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/animals/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/animals/DomesticAnimal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/animals/WildAnimal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/appointments/Appointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/appointments/EmergencyAppointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/appointments/PrebookedAppointment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/state/PlannerState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/state/PlannerStateContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/state/StartPlanningDay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/state/StopPlanningDay.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/strategies/AppointmentAnimalCreationStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/strategies/AppointmentStrategyForAnimalCreationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/strategies/EmergencyAppointmentAnimalCreationStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/strategies/NonEmergencyAppointmentAnimalCreationStrategy.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +76,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1o1rITJSRiwdMgujhIMJwNIwEoc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -153,8 +162,16 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/VetAppointmentBookingSimulator.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/models/animals/Animal.java</url>
           <line>7</line>
-          <option name="timeStamp" value="8" />
+          <properties class="models.animals.Animal" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

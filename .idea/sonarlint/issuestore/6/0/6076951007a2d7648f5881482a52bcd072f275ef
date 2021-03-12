@@ -1,7 +1,7 @@
 
-U	java:S106k"9Replace this use of System.out or System.err by a logger.(şÛâ8»Ñé®‚/
-[
-java:S4973"9Use the "equals" method if value comparison was intended.(‘«õ¥ûÿÿÿÿ8ä«Ó®‚/
 U	java:S106,"9Replace this use of System.out or System.err by a logger.(şÛâ8Üã®‚/
+U	java:S106k"9Replace this use of System.out or System.err by a logger.(şÛâ8»Ñé®‚/
 Z	java:S106\"9Replace this use of System.out or System.err by a logger.(©Ñ“Üıÿÿÿÿ8ä«Ó®‚/
-U	java:S106j"9Replace this use of System.out or System.err by a logger.(íÍ°ƒ8ä«Ó®‚/
+Z	java:S106j"9Replace this use of System.out or System.err by a logger.(öªÊæşÿÿÿÿ8ä«Ó®‚/
+[
+java:S4973"9Use the "equals" method if value comparison was intended.(‘«õ¥ûÿÿÿÿ8ğƒ¸²‚/
