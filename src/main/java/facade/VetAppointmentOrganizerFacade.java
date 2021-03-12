@@ -133,7 +133,7 @@ public class VetAppointmentOrganizerFacade {
     }
 
     public boolean isPlannerFull(Planner planner) {
-        return planner.getAppointmentList() != null && planner.getAppointmentList().size() >= 27;
+        return planner.getAppointmentList() != null && planner.getAppointmentList().size() >= 2;
     }
 
     protected List<VeterinaryDoctor> getAllDoctors() {

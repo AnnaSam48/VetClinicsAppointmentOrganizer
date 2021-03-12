@@ -18,6 +18,7 @@ public abstract class Appointment {
         this.appointmentType = appointmentType;
         this.appointmentTimeSlot = appointmentTimeSlot;
         this.veterinaryDoctor = veterinaryDoctor;
+        this.animal = animal;
     }
 
     public String getAppointmentType(){
