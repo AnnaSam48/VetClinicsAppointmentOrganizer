@@ -41,4 +41,7 @@ public abstract class Appointment {
         this.animal = animal;
     }
 
+  //  public String getAnimalName(Animal animal){
+   // }
+
 }

@@ -9,4 +9,8 @@ abstract public class Animal {
         this.isWildAnimal = isWildAnimal;
         this.animal = animal;
     }
+
+    public String getAnimal() {
+        return animal;
+    }
 }

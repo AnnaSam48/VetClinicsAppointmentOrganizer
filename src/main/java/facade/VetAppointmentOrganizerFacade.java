@@ -105,7 +105,7 @@ public class VetAppointmentOrganizerFacade {
                     TimeSlot timeslot = appointment.getAppointmentTimeSlot();
                     return timeslot.getSlotNumber();
                 }))
-                .forEach(appointment -> System.out.println(appointment.getAppointmentTimeSlot().getSlotName() + "||" + appointment.getVeterinaryDoctor().getNameSurname() + "||" + appointment.getAppointmentType() + "||" + appointment.getAnimal()));
+                .forEach(appointment -> System.out.println(appointment.getAppointmentTimeSlot().getSlotName() + "||" + appointment.getVeterinaryDoctor().getNameSurname() + "||" + appointment.getAppointmentType() + "||" + appointment.getAnimal().getAnimal()));
         System.out.println(context.getState().toString());
     }
 
@@ -133,7 +133,7 @@ public class VetAppointmentOrganizerFacade {
     }
 
     public boolean isPlannerFull(Planner planner) {
-        return planner.getAppointmentList() != null && planner.getAppointmentList().size() >= 2;
+        return planner.getAppointmentList() != null && planner.getAppointmentList().size() >= 27;
     }
 
     protected List<VeterinaryDoctor> getAllDoctors() {
