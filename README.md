@@ -6,7 +6,7 @@ This is small coding exercise with goal of learning how to use design patterns i
 The solution must make use of at least:
 * 1 Creational GoF pattern
 * 1 Structural GoF pattern
-* 1 Behaverioral Gof pattern
+* 1 Behaverioral GoF pattern
 
 The solution must make use of:
 * 4 non-creational GoF patterns in total
