@@ -27,6 +27,7 @@ The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 a
 * Timeslot selection
 * Patient (animal) creation
 * Also appointment type creation (house call, vaccine, check up, surgery)
+
 **Logic:**
 If the randomly selected timeslot number is 1-4 appointment is emergency appointment and the animal has to be wild animal.
 All other appointments are regular appointments with domestic animals.
