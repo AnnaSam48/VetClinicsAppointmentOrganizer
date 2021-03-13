@@ -28,7 +28,7 @@ The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 a
 * Patient (animal) creation
 * Also appointment type creation (house call, vaccine, check up, surgery)
 
-**Factories (Factory Abstraction and Factory Method) are used for:
+**Factories (Factory Abstraction and Factory Method) are used for:**
 
 * Animal creation
 * Appointment creation
