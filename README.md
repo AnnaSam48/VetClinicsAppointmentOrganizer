@@ -23,11 +23,28 @@ Output should be printed to standard console output.
 ### What Does The App Do:
 The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 appointments for each of 3 doctors.
 
-**Random generation is used for:**
+**Random is used for:**
 * Timeslot selection
 * Patient (animal) creation
 * Also appointment type creation (house call, vaccine, check up, surgery)
 
+**Factories (Factory Abstraction and Factory Method) are used for:
+* Animal creation
+* Appointment creation
+
+**Strategy is used for:**
+* Selecting what kind of facory needs to be called for animal creation
+
+**State is used for:**
+*Booking state reporting. (Could be used to do the booking, but then facade would be useless, so for now just reports booking state.)
+
+**Decorator/Bridge is used for:**
+*Reporting of created appointments urgency level - urgent (emergency)/ not urgent (standard appointment)
+
+**Facade is used for:**
+*All the complicated logic, so that the process can be called with one method call.
+
 **Logic:**
+
 If the randomly selected timeslot number is 1-4 appointment is emergency appointment and the animal has to be wild animal.
 All other appointments are regular appointments with domestic animals.
