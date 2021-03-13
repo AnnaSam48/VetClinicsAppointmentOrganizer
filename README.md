@@ -35,7 +35,7 @@ The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 a
 
 **Strategy is used for:**
 
-*Selecting what kind of facory needs to be called for animal creation*
+*Selecting what kind of factory needs to be called for animal creation*
 
 **State is used for:**
 
