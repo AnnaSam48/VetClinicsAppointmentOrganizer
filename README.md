@@ -35,19 +35,19 @@ The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 a
 
 **Strategy is used for:**
 
-* Selecting what kind of facory needs to be called for animal creation
+*Selecting what kind of facory needs to be called for animal creation*
 
 **State is used for:**
 
-*Booking state reporting. (Could be used to do the booking, but then facade would be useless, so for now just reports booking state.)
+*Booking state reporting. (Could be used to do the booking, but then facade would be useless, so for now just reports booking state.)*
 
 **Decorator/Bridge is used for:**
 
-*Reporting of created appointments urgency level - urgent (emergency)/ not urgent (standard appointment)
+*Reporting of created appointments urgency level - urgent (emergency)/ not urgent (standard appointment)*
 
 **Facade is used for:**
 
-*All the complicated logic, so that the process can be called with one method call.
+*All the complicated logic, so that the process can be called with one method call.*
 
 **Logic:**
 
