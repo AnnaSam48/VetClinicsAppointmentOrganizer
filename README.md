@@ -21,7 +21,7 @@ Output should be printed to standard console output.
 * 2 Behavior Design Patterns: State Pattern and Strategy Pattern
 
 ### What Does The App Do:
-The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 appointments for each of 3 doctors.
+The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 appointments for each of 3 doctors for one day.
 
 **Random is used for:**
 * Timeslot selection
