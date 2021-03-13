@@ -1,7 +1,5 @@
 # Object Oriented Design Pattern CSE Roadmap Homework - Veterinary Appointment Organizer
 
-###What is it?
-
 This is small coding exercise with goal of learning how to use design patterns in code.
 
 ### Requirements:
