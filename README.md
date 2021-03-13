@@ -43,7 +43,7 @@ The app is a simulator of appointment planner in Veterinary Clinic. It plans 9 a
 
 **Decorator/Bridge is used for:**
 
-*Reporting of created appointments urgency level - urgent (emergency)/ not urgent (standard appointment)*
+*Reporting of created appointment's urgency level - urgent (emergency)/ not urgent (standard appointment)*
 
 **Facade is used for:**
 
